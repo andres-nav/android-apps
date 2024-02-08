@@ -1,0 +1,2413 @@
+{
+  "_id": "65c4f976ecc914091d4ba695",
+  "version": 2.1,
+  "name": "Project1",
+  "description": "",
+  "screenSize": {
+    "w": 360,
+    "h": 640
+  },
+  "type": "smartphone",
+  "screens": {
+    "s10000_13338": {
+      "x": 1173,
+      "y": 1006,
+      "h": 640,
+      "w": 360,
+      "name": "Screen",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": true
+      },
+      "children": [
+        "w10001_91544",
+        "w10002_5707",
+        "w10003_53608",
+        "w10004_84368",
+        "w10005_94412",
+        "w10007_88663",
+        "w10006_69181"
+      ],
+      "id": "s10000_13338"
+    },
+    "s10008_4485": {
+      "x": 1555,
+      "y": 1006,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 1",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10015_30040",
+        "w10013_33734",
+        "w10016_45918",
+        "w10017_19020",
+        "w10023_7108",
+        "w10014_20556",
+        "w10065_7278",
+        "w10067_26559",
+        "w10011_25441",
+        "w10085_47671",
+        "w10086_64151",
+        "w10087_47491",
+        "w10088_14699",
+        "w10089_9567",
+        "w10090_41287",
+        "w10091_28560"
+      ],
+      "id": "s10008_4485"
+    },
+    "s10018_7868": {
+      "x": 1949,
+      "y": 1006,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 2",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10019_86077",
+        "w10020_85227",
+        "w10021_78538",
+        "w10022_1255",
+        "w10026_65007",
+        "w10060_41294",
+        "w10068_35672",
+        "w10069_91912"
+      ],
+      "id": "s10018_7868"
+    },
+    "s10027_29501": {
+      "x": 1173,
+      "y": 1684,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 3",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10030_36628",
+        "w10029_57020",
+        "w10031_29777",
+        "w10032_96181",
+        "w10033_28908",
+        "w10061_74990",
+        "w10071_13715"
+      ],
+      "id": "s10027_29501"
+    },
+    "s10034_78734": {
+      "x": 1555,
+      "y": 1684,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 4",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10035_84812",
+        "w10062_62983",
+        "w10036_24291",
+        "w10077_62621",
+        "w10078_97060",
+        "w10079_5372",
+        "w10080_23594",
+        "w10076_32256",
+        "w10081_12213",
+        "w10082_63158",
+        "w10083_54731",
+        "w10084_46486"
+      ],
+      "id": "s10034_78734"
+    },
+    "s10042_20821": {
+      "x": 1949,
+      "y": 1684,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 5",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10043_60148",
+        "w10044_56469",
+        "w10045_35858",
+        "w10063_46432"
+      ],
+      "id": "s10042_20821"
+    },
+    "s10047_69182": {
+      "x": 1173,
+      "y": 2359,
+      "h": 640,
+      "w": 360,
+      "name": "Screen 6",
+      "type": "Screen",
+      "style": {
+        "background": "#ffffff"
+      },
+      "min": {
+        "w": 360,
+        "h": 640
+      },
+      "has": {
+        "image": true
+      },
+      "props": {
+        "start": false
+      },
+      "children": [
+        "w10049_93059",
+        "w10051_92415",
+        "w10052_95263",
+        "w10054_9268",
+        "w10055_48249",
+        "w10053_65131",
+        "w10050_72576",
+        "w10064_40044"
+      ],
+      "id": "s10047_69182"
+    }
+  },
+  "widgets": {
+    "w10001_91544": {
+      "id": "w10001_91544",
+      "type": "Icon",
+      "name": "Icon",
+      "x": 1254,
+      "y": 1353,
+      "w": 40,
+      "h": 40,
+      "z": 1,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-google"
+      },
+      "created": 1707406383342
+    },
+    "w10002_5707": {
+      "id": "w10002_5707",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 1508,
+      "y": 1015,
+      "w": 25,
+      "h": 25,
+      "z": 2,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707406401132,
+      "modified": 1707406408741
+    },
+    "w10003_53608": {
+      "id": "w10003_53608",
+      "type": "Icon",
+      "name": "Icon 2",
+      "x": 1306,
+      "y": 1353,
+      "w": 40,
+      "h": 40,
+      "z": 3,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-facebook"
+      },
+      "created": 1707406423791
+    },
+    "w10004_84368": {
+      "id": "w10004_84368",
+      "type": "Icon",
+      "name": "Icon 3",
+      "x": 1358,
+      "y": 1353,
+      "w": 40,
+      "h": 40,
+      "z": 4,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-linkedin"
+      },
+      "created": 1707406442127
+    },
+    "w10005_94412": {
+      "id": "w10005_94412",
+      "type": "Icon",
+      "name": "Icon 4",
+      "x": 1410,
+      "y": 1353,
+      "w": 40,
+      "h": 40,
+      "z": 5,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-github"
+      },
+      "created": 1707406449989
+    },
+    "w10006_69181": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1220,
+      "y": 1107,
+      "w": 266,
+      "h": 38,
+      "z": 6,
+      "props": {
+        "label": "Track My Shoes"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10006_69181",
+      "created": 1707406495936,
+      "modified": 1707409158498
+    },
+    "w10007_88663": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 1280,
+      "y": 1305,
+      "w": 146,
+      "h": 20,
+      "z": 7,
+      "props": {
+        "label": "Sign Up / Log In"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10007_88663",
+      "created": 1707406563001,
+      "modified": 1707406614688
+    },
+    "w10011_25441": {
+      "id": "w10011_25441",
+      "type": "Button",
+      "name": "Button 2",
+      "x": 1592,
+      "y": 1480,
+      "w": 79,
+      "h": 72,
+      "style": {
+        "background": "#ff4081",
+        "borderBottomColor": "#ffffff",
+        "borderTopColor": "#ffffff",
+        "borderLeftColor": "#ffffff",
+        "borderRightColor": "#ffffff",
+        "borderBottomLeftRadius": 500,
+        "borderTopLeftRadius": 500,
+        "borderBottomRightRadius": 500,
+        "borderTopRightRadius": 500,
+        "borderBottomWidth": 0,
+        "borderTopWidth": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "textAlign": "center",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": 28,
+        "fontStyle": "normal",
+        "fontWeight": "500",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#ffffff",
+        "textDecoration": "none",
+        "boxShadow": {
+          "v": 2,
+          "h": 0,
+          "b": 2,
+          "s": 0,
+          "c": "rgba(0,0,0,0.24)",
+          "i": false
+        },
+        "valign": "middle"
+      },
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "onclick": true,
+        "label": true,
+        "padding": false,
+        "backgroundColor": true,
+        "border": true
+      },
+      "z": 10,
+      "created": 1707406729213,
+      "copyOf": "w10009_44912",
+      "modified": 1707409729630
+    },
+    "w10013_33734": {
+      "id": "w10013_33734",
+      "type": "Box",
+      "name": "Rectangle",
+      "x": 1579,
+      "y": 1056,
+      "w": 286,
+      "h": 151,
+      "z": 11,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707406824726,
+      "modified": 1707407043385
+    },
+    "w10014_20556": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1602,
+      "y": 1056,
+      "w": 464,
+      "h": 20,
+      "z": 12,
+      "props": {
+        "label": "Name of the run\n\nDate\n\nKm / Time\n\nTime / Km Rate\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10014_20556",
+      "created": 1707406837883,
+      "modified": 1707409816921
+    },
+    "w10015_30040": {
+      "id": "w10015_30040",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 1890,
+      "y": 1015,
+      "w": 25,
+      "h": 25,
+      "z": 13,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707406893709,
+      "modified": 1707406895988,
+      "copyOf": "w10002_5707"
+    },
+    "w10016_45918": {
+      "id": "w10016_45918",
+      "type": "Button",
+      "name": "Button 3",
+      "x": 1767,
+      "y": 1157,
+      "w": 76,
+      "h": 34,
+      "z": 14,
+      "props": {
+        "label": "More"
+      },
+      "has": {
+        "backgroundColor": true,
+        "border": true,
+        "onclick": true,
+        "label": true,
+        "padding": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 3,
+        "borderTopLeftRadius": 3,
+        "borderBottomRightRadius": 3,
+        "borderBottomLeftRadius": 3,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#333333",
+        "fontSize": 14,
+        "textAlign": "center",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#ffffff",
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "verticalAlign": "middle"
+      },
+      "created": 1707406909067,
+      "modified": 1707407061587
+    },
+    "w10017_19020": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 1618,
+      "y": 1314,
+      "w": 205,
+      "h": 20,
+      "z": 15,
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10017_19020",
+      "created": 1707407065607,
+      "modified": 1707407147915
+    },
+    "w10019_86077": {
+      "type": "Label",
+      "name": "Label",
+      "x": 2017,
+      "y": 1039,
+      "w": 132,
+      "h": 35,
+      "z": 16,
+      "props": {
+        "label": "Leaderboard"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10019_86077",
+      "created": 1707407091564,
+      "modified": 1707407116925
+    },
+    "w10020_85227": {
+      "id": "w10020_85227",
+      "type": "Box",
+      "name": "Rectangle",
+      "x": 1986,
+      "y": 1093,
+      "w": 286,
+      "h": 151,
+      "z": 17,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407129555,
+      "modified": 1707407132900,
+      "copyOf": "w10013_33734"
+    },
+    "w10021_78538": {
+      "id": "w10021_78538",
+      "type": "Box",
+      "name": "Rectangle 1",
+      "x": 1986,
+      "y": 1272,
+      "w": 286,
+      "h": 151,
+      "z": 18,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407134031,
+      "modified": 1707407137008,
+      "copyOf": "w10013_33734"
+    },
+    "w10022_1255": {
+      "id": "w10022_1255",
+      "type": "Box",
+      "name": "Rectangle 2",
+      "x": 1986,
+      "y": 1451,
+      "w": 286,
+      "h": 151,
+      "z": 19,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407137767,
+      "modified": 1707407140258,
+      "copyOf": "w10013_33734"
+    },
+    "w10023_7108": {
+      "id": "w10023_7108",
+      "type": "Box",
+      "name": "Rectangle 1",
+      "x": 1579,
+      "y": 1251,
+      "w": 286,
+      "h": 151,
+      "z": 20,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407141707,
+      "modified": 1707407150651,
+      "copyOf": "w10013_33734"
+    },
+    "w10026_65007": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 2017,
+      "y": 1115,
+      "w": 318,
+      "h": 20,
+      "z": 21,
+      "props": {
+        "label": "Name Run\n\nPerson\n\nKm / Time\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10026_65007",
+      "created": 1707407181899,
+      "modified": 1707409043287
+    },
+    "w10029_57020": {
+      "id": "w10029_57020",
+      "type": "Box",
+      "name": "Rectangle",
+      "x": 1405,
+      "y": 1762,
+      "w": 100,
+      "h": 40,
+      "z": 22,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407309893,
+      "modified": 1707407354170
+    },
+    "w10030_36628": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1421,
+      "y": 1762,
+      "w": 102,
+      "h": 22,
+      "z": 23,
+      "props": {
+        "label": "Kms\nTimer\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10030_36628",
+      "created": 1707407324060,
+      "modified": 1707407350551
+    },
+    "w10031_29777": {
+      "id": "w10031_29777",
+      "type": "Button",
+      "name": "Button",
+      "x": 1421,
+      "y": 2252,
+      "w": 90,
+      "h": 36,
+      "style": {
+        "fontFamily": "Roboto, sans-serif",
+        "borderBottomColor": "#000000",
+        "borderTopColor": "#000000",
+        "borderLeftColor": "#000000",
+        "borderRightColor": "#000000",
+        "borderBottomLeftRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderBottomWidth": 0,
+        "borderTopWidth": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 0,
+        "textAlign": "center",
+        "fontSize": 14,
+        "fontStyle": "normal",
+        "fontWeight": "500",
+        "letterSpacing": 0,
+        "lineHeight": 2.571,
+        "color": "#ffffff",
+        "background": "#3f51b5",
+        "textDecoration": "none",
+        "boxShadow": {
+          "v": 2,
+          "h": 0,
+          "b": 2,
+          "s": 0,
+          "c": "rgba(0,0,0,0.24)",
+          "i": false
+        }
+      },
+      "props": {
+        "label": "Stop"
+      },
+      "has": {
+        "onclick": true,
+        "label": true,
+        "padding": false,
+        "backgroundColor": true,
+        "border": true
+      },
+      "z": 24,
+      "created": 1707407375866,
+      "modified": 1707407379798
+    },
+    "w10032_96181": {
+      "id": "w10032_96181",
+      "type": "Button",
+      "name": "Button 1",
+      "x": 1314,
+      "y": 2252,
+      "w": 90,
+      "h": 36,
+      "style": {
+        "fontFamily": "Roboto, sans-serif",
+        "borderBottomColor": "#000000",
+        "borderTopColor": "#000000",
+        "borderLeftColor": "#000000",
+        "borderRightColor": "#000000",
+        "borderBottomLeftRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderBottomWidth": 0,
+        "borderTopWidth": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 0,
+        "textAlign": "center",
+        "fontSize": 14,
+        "fontStyle": "normal",
+        "fontWeight": "500",
+        "letterSpacing": 0,
+        "lineHeight": 2.571,
+        "color": "#ffffff",
+        "background": "#ff4081",
+        "textDecoration": "none",
+        "boxShadow": {
+          "v": 2,
+          "h": 0,
+          "b": 2,
+          "s": 0,
+          "c": "rgba(0,0,0,0.24)",
+          "i": false
+        }
+      },
+      "props": {
+        "label": "Start"
+      },
+      "has": {
+        "onclick": true,
+        "label": true,
+        "padding": false,
+        "backgroundColor": true,
+        "border": true
+      },
+      "z": 25,
+      "created": 1707407383932,
+      "modified": 1707407387468
+    },
+    "w10033_28908": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 1283,
+      "y": 1945,
+      "w": 61,
+      "h": 22,
+      "z": 26,
+      "props": {
+        "label": "MAPA"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10033_28908",
+      "created": 1707407392113
+    },
+    "w10035_84812": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1569,
+      "y": 1705,
+      "w": 332,
+      "h": 43,
+      "z": 27,
+      "props": {
+        "label": "Current Location"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10035_84812",
+      "created": 1707407415285,
+      "modified": 1707407547885
+    },
+    "w10043_60148": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1963,
+      "y": 1705,
+      "w": 332,
+      "h": 43,
+      "z": 33,
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10043_60148",
+      "created": 1707407568820,
+      "modified": 1707407589527,
+      "copyOf": "w10035_84812"
+    },
+    "w10044_56469": {
+      "id": "w10044_56469",
+      "type": "Box",
+      "name": "Rectangle",
+      "x": 1988,
+      "y": 1708,
+      "w": 267,
+      "h": 76,
+      "z": 34,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707407599044,
+      "modified": 1707407604329
+    },
+    "w10045_35858": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 2005,
+      "y": 1725,
+      "w": 290,
+      "h": 23,
+      "z": 35,
+      "props": {
+        "label": "New Record Achieved by&nbsp;User3\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10045_35858",
+      "created": 1707407608923,
+      "modified": 1707407698608
+    },
+    "w10049_93059": {
+      "type": "Label",
+      "name": "Label",
+      "x": 1226,
+      "y": 2425,
+      "w": 139,
+      "h": 20,
+      "z": 38,
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10049_93059",
+      "created": 1707408563913,
+      "modified": 1707408757547
+    },
+    "w10050_72576": {
+      "id": "w10050_72576",
+      "type": "Box",
+      "name": "Rectangle",
+      "x": 1252,
+      "y": 2525,
+      "w": 203,
+      "h": 189,
+      "z": 39,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707408587292,
+      "modified": 1707408941252
+    },
+    "w10051_92415": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 1270,
+      "y": 2539,
+      "w": 203,
+      "h": 20,
+      "z": 40,
+      "props": {
+        "label": "NAME / LOCATION\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SAVE\n\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10051_92415",
+      "created": 1707408594027,
+      "modified": 1707408936719
+    },
+    "w10052_95263": {
+      "id": "w10052_95263",
+      "type": "Box",
+      "name": "Rectangle 1",
+      "x": 1265,
+      "y": 2632,
+      "w": 69,
+      "h": 40,
+      "z": 41,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707408671541,
+      "modified": 1707408680236
+    },
+    "w10053_65131": {
+      "id": "w10053_65131",
+      "type": "Box",
+      "name": "Rectangle 2",
+      "x": 1374,
+      "y": 2632,
+      "w": 70,
+      "h": 40,
+      "z": 42,
+      "props": {},
+      "has": {
+        "backgroundColor": true,
+        "border": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#ffffff"
+      },
+      "created": 1707408673258,
+      "copyOf": "w10052_95263",
+      "modified": 1707408703433
+    },
+    "w10054_9268": {
+      "type": "Label",
+      "name": "Label 2",
+      "x": 1284,
+      "y": 2640,
+      "w": 33,
+      "h": 20,
+      "z": 43,
+      "props": {
+        "label": "Yes"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10054_9268",
+      "created": 1707408683823,
+      "modified": 1707408691004
+    },
+    "w10055_48249": {
+      "type": "Label",
+      "name": "Label 3",
+      "x": 1396,
+      "y": 2642,
+      "w": 26,
+      "h": 20,
+      "z": 44,
+      "props": {
+        "label": "No"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10055_48249",
+      "created": 1707408694475,
+      "modified": 1707408699745
+    },
+    "w10060_41294": {
+      "id": "w10060_41294",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 2284,
+      "y": 1015,
+      "w": 25,
+      "h": 25,
+      "z": 45,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707408948072,
+      "modified": 1707406408741,
+      "copyOf": "w10002_5707"
+    },
+    "w10061_74990": {
+      "id": "w10061_74990",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 1508,
+      "y": 1693,
+      "w": 25,
+      "h": 25,
+      "z": 46,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707408951464,
+      "modified": 1707406408741,
+      "copyOf": "w10002_5707"
+    },
+    "w10062_62983": {
+      "id": "w10062_62983",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 1890,
+      "y": 1693,
+      "w": 25,
+      "h": 25,
+      "z": 47,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707408953536,
+      "modified": 1707406408741,
+      "copyOf": "w10002_5707"
+    },
+    "w10063_46432": {
+      "id": "w10063_46432",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 2284,
+      "y": 1693,
+      "w": 25,
+      "h": 25,
+      "z": 48,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707408955924,
+      "modified": 1707406408741,
+      "copyOf": "w10002_5707"
+    },
+    "w10064_40044": {
+      "id": "w10064_40044",
+      "type": "Icon",
+      "name": "Icon 1",
+      "x": 1508,
+      "y": 2368,
+      "w": 25,
+      "h": 25,
+      "z": 49,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-battery-40-bluetooth"
+      },
+      "created": 1707408958944,
+      "modified": 1707406408741,
+      "copyOf": "w10002_5707"
+    },
+    "w10065_7278": {
+      "id": "w10065_7278",
+      "type": "Button",
+      "name": "Button 4",
+      "x": 1769,
+      "y": 1353,
+      "w": 76,
+      "h": 34,
+      "z": 50,
+      "props": {
+        "label": "More"
+      },
+      "has": {
+        "backgroundColor": true,
+        "border": true,
+        "onclick": true,
+        "label": true,
+        "padding": true
+      },
+      "actions": {},
+      "style": {
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "borderTopRightRadius": 3,
+        "borderTopLeftRadius": 3,
+        "borderBottomRightRadius": 3,
+        "borderBottomLeftRadius": 3,
+        "borderTopWidth": 1,
+        "borderBottomWidth": 1,
+        "borderRightWidth": 1,
+        "borderLeftWidth": 1,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "background": "#333333",
+        "fontSize": 14,
+        "textAlign": "center",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#ffffff",
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "verticalAlign": "middle"
+      },
+      "created": 1707408970557,
+      "modified": 1707408975809,
+      "copyOf": "w10016_45918"
+    },
+    "w10067_26559": {
+      "type": "Label",
+      "name": "Label 2",
+      "x": 1600,
+      "y": 1264,
+      "w": 440,
+      "h": 19,
+      "z": 51,
+      "props": {
+        "label": "Name of the run\n\nDate\n\nKm / Time\n\nTime / Km Rate\n\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10067_26559",
+      "created": 1707409000487,
+      "modified": 1707409849435
+    },
+    "w10068_35672": {
+      "type": "Label",
+      "name": "Label 2",
+      "x": 2020,
+      "y": 1295,
+      "w": 261,
+      "h": 19,
+      "z": 52,
+      "props": {
+        "label": "Name Run\n\nPerson\n\nKm / Time"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10068_35672",
+      "created": 1707409045920,
+      "modified": 1707409061963
+    },
+    "w10069_91912": {
+      "type": "Label",
+      "name": "Label 3",
+      "x": 2019,
+      "y": 1477,
+      "w": 261,
+      "h": 19,
+      "z": 53,
+      "props": {
+        "label": "Name Run\n\nPerson\n\nKm / Time"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10069_91912",
+      "created": 1707409066216,
+      "modified": 1707409121105
+    },
+    "w10071_13715": {
+      "id": "w10071_13715",
+      "type": "Icon",
+      "name": "Icon",
+      "x": 1344,
+      "y": 1936,
+      "w": 40,
+      "h": 40,
+      "z": 55,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-map-marker"
+      },
+      "created": 1707409293922
+    },
+    "w10076_32256": {
+      "id": "w10076_32256",
+      "type": "Icon",
+      "name": "Icon",
+      "x": 1766,
+      "y": 1771,
+      "w": 40,
+      "h": 40,
+      "z": 56,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-thought-bubble-outline"
+      },
+      "created": 1707409587712,
+      "modified": 1707409616090
+    },
+    "w10036_24291": {
+      "type": "Label",
+      "name": "Label 1",
+      "x": 1645,
+      "y": 1782,
+      "w": 183,
+      "h": 22,
+      "z": 28,
+      "props": {
+        "label": "16:00 Rainy"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10036_24291",
+      "created": 1707407485137,
+      "modified": 1707409597275
+    },
+    "w10077_62621": {
+      "type": "Label",
+      "name": "Label 2",
+      "x": 1644,
+      "y": 1831,
+      "w": 183,
+      "h": 22,
+      "z": 57,
+      "props": {
+        "label": "16:00 Rainy"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10077_62621",
+      "created": 1707409607263,
+      "modified": 1707409610715,
+      "copyOf": "w10036_24291"
+    },
+    "w10078_97060": {
+      "type": "Label",
+      "name": "Label 3",
+      "x": 1643,
+      "y": 1880,
+      "w": 183,
+      "h": 22,
+      "z": 58,
+      "props": {
+        "label": "16:00 Rainy"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10078_97060",
+      "created": 1707409611765,
+      "modified": 1707409597275,
+      "copyOf": "w10036_24291"
+    },
+    "w10079_5372": {
+      "type": "Label",
+      "name": "Label 4",
+      "x": 1642,
+      "y": 1929,
+      "w": 183,
+      "h": 22,
+      "z": 59,
+      "props": {
+        "label": "16:00 Rainy"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10079_5372",
+      "created": 1707409612444,
+      "modified": 1707409597275,
+      "copyOf": "w10036_24291"
+    },
+    "w10080_23594": {
+      "type": "Label",
+      "name": "Label 5",
+      "x": 1641,
+      "y": 1978,
+      "w": 183,
+      "h": 22,
+      "z": 60,
+      "props": {
+        "label": "16:00 Rainy"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10080_23594",
+      "created": 1707409612980,
+      "modified": 1707409597275,
+      "copyOf": "w10036_24291"
+    },
+    "w10081_12213": {
+      "id": "w10081_12213",
+      "type": "Icon",
+      "name": "Icon 2",
+      "x": 1764,
+      "y": 1817,
+      "w": 40,
+      "h": 40,
+      "z": 61,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-thought-bubble-outline"
+      },
+      "created": 1707409618008,
+      "modified": 1707409620193,
+      "copyOf": "w10076_32256"
+    },
+    "w10082_63158": {
+      "id": "w10082_63158",
+      "type": "Icon",
+      "name": "Icon 3",
+      "x": 1762,
+      "y": 1870,
+      "w": 40,
+      "h": 40,
+      "z": 62,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-thought-bubble-outline"
+      },
+      "created": 1707409621409,
+      "modified": 1707409625775,
+      "copyOf": "w10076_32256"
+    },
+    "w10083_54731": {
+      "id": "w10083_54731",
+      "type": "Icon",
+      "name": "Icon 4",
+      "x": 1760,
+      "y": 1918,
+      "w": 40,
+      "h": 40,
+      "z": 63,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-thought-bubble-outline"
+      },
+      "created": 1707409626972,
+      "modified": 1707409631194,
+      "copyOf": "w10076_32256"
+    },
+    "w10084_46486": {
+      "id": "w10084_46486",
+      "type": "Icon",
+      "name": "Icon 5",
+      "x": 1758,
+      "y": 1966,
+      "w": 40,
+      "h": 40,
+      "z": 64,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-thought-bubble-outline"
+      },
+      "created": 1707409632404,
+      "modified": 1707409616090,
+      "copyOf": "w10076_32256"
+    },
+    "w10085_47671": {
+      "id": "w10085_47671",
+      "type": "Button",
+      "name": "Button",
+      "x": 1688,
+      "y": 1481,
+      "w": 79,
+      "h": 72,
+      "style": {
+        "background": "#ff4081",
+        "borderBottomColor": "#ffffff",
+        "borderTopColor": "#ffffff",
+        "borderLeftColor": "#ffffff",
+        "borderRightColor": "#ffffff",
+        "borderBottomLeftRadius": 500,
+        "borderTopLeftRadius": 500,
+        "borderBottomRightRadius": 500,
+        "borderTopRightRadius": 500,
+        "borderBottomWidth": 0,
+        "borderTopWidth": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "textAlign": "center",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": 28,
+        "fontStyle": "normal",
+        "fontWeight": "500",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#ffffff",
+        "textDecoration": "none",
+        "boxShadow": {
+          "v": 2,
+          "h": 0,
+          "b": 2,
+          "s": 0,
+          "c": "rgba(0,0,0,0.24)",
+          "i": false
+        },
+        "valign": "middle"
+      },
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "onclick": true,
+        "label": true,
+        "padding": false,
+        "backgroundColor": true,
+        "border": true
+      },
+      "z": 65,
+      "created": 1707409716408,
+      "copyOf": "w10011_25441",
+      "modified": 1707409732273
+    },
+    "w10086_64151": {
+      "id": "w10086_64151",
+      "type": "Button",
+      "name": "Button 1",
+      "x": 1788,
+      "y": 1479,
+      "w": 79,
+      "h": 72,
+      "style": {
+        "background": "#ff4081",
+        "borderBottomColor": "#ffffff",
+        "borderTopColor": "#ffffff",
+        "borderLeftColor": "#ffffff",
+        "borderRightColor": "#ffffff",
+        "borderBottomLeftRadius": 500,
+        "borderTopLeftRadius": 500,
+        "borderBottomRightRadius": 500,
+        "borderTopRightRadius": 500,
+        "borderBottomWidth": 0,
+        "borderTopWidth": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "textAlign": "center",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": 28,
+        "fontStyle": "normal",
+        "fontWeight": "500",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#ffffff",
+        "textDecoration": "none",
+        "boxShadow": {
+          "v": 2,
+          "h": 0,
+          "b": 2,
+          "s": 0,
+          "c": "rgba(0,0,0,0.24)",
+          "i": false
+        },
+        "valign": "middle"
+      },
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "onclick": true,
+        "label": true,
+        "padding": false,
+        "backgroundColor": true,
+        "border": true
+      },
+      "z": 66,
+      "created": 1707409716938,
+      "copyOf": "w10011_25441",
+      "modified": 1707409735040
+    },
+    "w10087_47491": {
+      "id": "w10087_47491",
+      "type": "Icon",
+      "name": "Icon",
+      "x": 1612,
+      "y": 1499,
+      "w": 40,
+      "h": 40,
+      "z": 67,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-trophy"
+      },
+      "created": 1707409759496
+    },
+    "w10088_14699": {
+      "id": "w10088_14699",
+      "type": "Icon",
+      "name": "Icon 2",
+      "x": 1708,
+      "y": 1494,
+      "w": 40,
+      "h": 40,
+      "z": 68,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-weather-night-partly-cloudy"
+      },
+      "created": 1707409777047
+    },
+    "w10089_9567": {
+      "id": "w10089_9567",
+      "type": "Icon",
+      "name": "Icon 3",
+      "x": 1808,
+      "y": 1494,
+      "w": 40,
+      "h": 40,
+      "z": 69,
+      "props": {},
+      "has": {
+        "onclick": true,
+        "data": true
+      },
+      "actions": {},
+      "style": {
+        "borderTopRightRadius": 0,
+        "borderTopLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderBottomLeftRadius": 0,
+        "borderTopWidth": 0,
+        "borderBottomWidth": 0,
+        "borderRightWidth": 0,
+        "borderLeftWidth": 0,
+        "borderTopColor": "#333333",
+        "borderBottomColor": "#333333",
+        "borderRightColor": "#333333",
+        "borderLeftColor": "#333333",
+        "color": "#333333",
+        "icon": "mdi mdi-run-fast"
+      },
+      "created": 1707409816059
+    },
+    "w10090_41287": {
+      "type": "Label",
+      "name": "Label 3",
+      "x": 1639,
+      "y": 1100,
+      "w": 0,
+      "h": 19,
+      "z": 70,
+      "props": {
+        "label": ""
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10090_41287",
+      "created": 1707409825477
+    },
+    "w10091_28560": {
+      "type": "Label",
+      "name": "Label 4",
+      "x": 1603,
+      "y": 1070,
+      "w": 440,
+      "h": 19,
+      "z": 71,
+      "props": {
+        "label": "Name of the run\n\nDate\n\nKm / Time\n\nTime / Km Rate\r\n"
+      },
+      "has": {
+        "label": true,
+        "padding": true,
+        "advancedText": true
+      },
+      "style": {
+        "fontSize": "Auto",
+        "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "letterSpacing": 0,
+        "lineHeight": 1,
+        "color": "#333333",
+        "textShadow": null
+      },
+      "id": "w10091_28560",
+      "created": 1707409858699,
+      "modified": 1707409894811
+    }
+  },
+  "lines": {},
+  "groups": {},
+  "templates": {},
+  "designtokens": {},
+  "lastUUID": 10092,
+  "lastUpdate": 1707409987422,
+  "created": 1707407734987,
+  "startScreen": "",
+  "grid": {
+    "w": 8,
+    "h": 8,
+    "style": "line",
+    "color": "#cecece",
+    "visible": false,
+    "enabled": false
+  },
+  "domain": "Quant-UX.com",
+  "screenCount": 7,
+  "widgetCount": 62,
+  "lastCategory": "WireFrame",
+  "sizeBackup": 6049,
+  "isPublic": false,
+  "parent": "65c4f41decc914091d4ba56b",
+  "id": "65c4f976ecc914091d4ba695",
+  "sessionCount": 1,
+  "imports": [
+    "65c4f3bcecc914091d4ba380"
+  ]
+}
