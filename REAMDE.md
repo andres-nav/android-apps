@@ -42,3 +42,35 @@
     - [ ] send notification to all users when record
 
 # Important Todos
+
+# Resources
+https://github.com/anmol-dhar/CodeClauseInternship_EasyAuthenticationApp/
+
+# Sign Report Gradle
+> Task :app:signingReport
+Variant: debug
+Config: debug
+Store: /home/god/.config/.android/debug.keystore
+Alias: AndroidDebugKey
+MD5: CA:66:6E:6F:90:C2:14:D4:C1:40:E5:FF:50:EE:FC:D5
+SHA1: 64:79:0F:35:DC:41:CB:39:78:87:25:EE:AE:68:E4:B7:3B:B5:7F:A1
+SHA-256: 66:A4:31:F8:4E:33:59:0C:67:B7:DC:D6:F4:64:CE:48:8B:2D:1A:A6:CF:47:D1:9C:EA:40:C2:D7:B0:23:0B:97
+Valid until: Thursday, December 4, 2053
+----------
+Variant: release
+Config: null
+Store: null
+Alias: null
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: /home/god/.config/.android/debug.keystore
+Alias: AndroidDebugKey
+MD5: CA:66:6E:6F:90:C2:14:D4:C1:40:E5:FF:50:EE:FC:D5
+SHA1: 64:79:0F:35:DC:41:CB:39:78:87:25:EE:AE:68:E4:B7:3B:B5:7F:A1
+SHA-256: 66:A4:31:F8:4E:33:59:0C:67:B7:DC:D6:F4:64:CE:48:8B:2D:1A:A6:CF:47:D1:9C:EA:40:C2:D7:B0:23:0B:97
+Valid until: Thursday, December 4, 2053
+----------
+
+BUILD SUCCESSFUL in 14s
+1 actionable task: 1 executed
