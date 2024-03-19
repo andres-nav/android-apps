@@ -49,6 +49,7 @@ public class FirebaseUtil {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
+                    Log.d(TAG, "" + documentSnapshot);
                     user = documentSnapshot.toObject(UserModel.class);
                     Log.d(TAG, user.getEmail());
                 } catch (RuntimeException exception) {

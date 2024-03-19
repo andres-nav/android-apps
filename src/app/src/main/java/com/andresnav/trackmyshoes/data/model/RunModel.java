@@ -10,14 +10,14 @@ public class RunModel {
    private String name;
    private Timestamp date;
    private Float totalKm;
-   private Float totalTime;
+   private Float totalTimeInMin;
 
    // TODO: add something related to the track taken
 
-    public RunModel(String name, Timestamp date, Float totalKm, Float totalTime) {
+    public RunModel(String name, Timestamp date, Float totalKm, Float totalTimeInMin) {
         this.name = name;
         this.date = date;
         this.totalKm = totalKm;
-        this.totalTime = totalTime;
+        this.totalTimeInMin = totalTimeInMin;
     }
 }
