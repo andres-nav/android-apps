@@ -11,6 +11,10 @@
     <string name="text_current_location">Current location:</string>
     <string name="text_overview_of_the_week">Overview of the week:</string>
     <string name="text_check_out_leaderboard">Check out who is at the top!</string>
+    <string name="text_category">Category:</string>
+    <string name="text_gold_medal">Gold Medal</string>
+    <string name="text_silver_medal">Silver Medal</string>
+    <string name="text_bronce_medal">Bronce Medal</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
