@@ -13,23 +13,32 @@
         android:theme="@style/Theme.TrackMyShoes"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".TrackActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/title_activity_login">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TrackMyShoes" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TrackMyShoes"></activity>
     </application>
 
 </manifest>

@@ -1,19 +1,23 @@
 package com.andresnav.trackmyshoes.utils;
 
+import android.content.Intent;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.andresnav.trackmyshoes.LoginActivity;
+import com.andresnav.trackmyshoes.SplashScreen;
+import com.andresnav.trackmyshoes.data.model.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class FirebaseUtil {
+
+    public static UserModel user = null;
 
     private static final String TAG = "GoogleFirestore";
 
@@ -28,30 +32,36 @@ public class FirebaseUtil {
         return false;
     }
 
-    public static DocumentReference currentUserDetails(){
-        return FirebaseFirestore.getInstance().collection("users").document(currentUserId());
+    public static void signOut() {
+        user = null;
+        FirebaseAuth.getInstance().signOut();
+        Log.d(TAG, "Signing out user");
     }
 
-    // FIXME: change it to return the status code not void
-    public static void insertExampleRun() {
-        Map<String, Object> run = new HashMap<>();
-        run.put("name", "Los Angeles");
-        run.put("date", "today");
-        run.put("time", "10 mins");
+    public static void loadUser(){
+        if (!isLoggedIn()) {
+            return;
+        }
 
-        currentUserDetails().set(run)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "DocumentSnapshot successfully written!");
-                    }
-                })
+        DocumentReference documentReference = FirebaseFirestore.getInstance().collection("users").document(currentUserId());
+
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                try {
+                    user = documentSnapshot.toObject(UserModel.class);
+                    Log.d(TAG, user.getEmail());
+                } catch (RuntimeException exception) {
+                    Log.d(TAG, "The current user document cannot be assigned to the UserModel class");
+                    signOut();
+                }
+            }
+        })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error writing document", e);
+                        Log.d(TAG, "Cannot get the current user document");
                     }
                 });
     }
-
 }
