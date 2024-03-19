@@ -1,6 +1,7 @@
 package com.andresnav.trackmyshoes;
 
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.loadUser;
+import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
         textViewUserId = findViewById(R.id.textViewUserId);
         textViewUserId.setText(String.format("user_id: %s", FirebaseUtil.currentUserId()));
+
+        binding.buttonSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+                Intent intent = new Intent(MainActivity.this, SplashScreen.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         binding.fabStart.setOnClickListener(new View.OnClickListener() {
             @Override

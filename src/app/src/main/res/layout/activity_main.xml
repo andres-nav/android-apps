@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/fab_margin"
+            app:elevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/fabLeaderboard"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_weather" />
@@ -41,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="@dimen/fab_margin"
+            app:elevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/fabStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_leaderboard" />
@@ -50,6 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
+            app:elevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_start" />
@@ -80,6 +83,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="@string/sign_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUserId" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

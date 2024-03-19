@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
+import com.andresnav.trackmyshoes.databinding.ActivityLoginBinding;
+import com.andresnav.trackmyshoes.databinding.ActivityMainBinding;
 import com.andresnav.trackmyshoes.utils.FirebaseUtil;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -32,12 +34,15 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     private GoogleSignInClient mGoogleSignInClient;
-    Button googleButton;
+
+    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -48,8 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        googleButton = findViewById(R.id.googleButton);
-        googleButton.setOnClickListener(v -> {
+        binding.googleButton.setOnClickListener(v -> {
             signIn();
         });
     }
