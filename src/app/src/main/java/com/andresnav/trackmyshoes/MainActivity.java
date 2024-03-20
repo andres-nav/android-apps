@@ -5,6 +5,7 @@ import static com.andresnav.trackmyshoes.utils.UserUtil.getCurrentUser;
 import static com.andresnav.trackmyshoes.utils.RunUtil.getRunsOfUser;
 import static com.andresnav.trackmyshoes.utils.Utils.print;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.andresnav.trackmyshoes.data.model.RunModel;
 import com.andresnav.trackmyshoes.data.model.UserModel;
@@ -22,12 +25,14 @@ import com.andresnav.trackmyshoes.utils.UserUtil;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemClickListener {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
     private TextView textViewUserId;
+
+    private RunsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +53,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Context context = this;
+
         getRunsOfUser(new RunUtil.RunsOfUserCallback() {
             @Override
             public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
                 print("runs: " + runs.size());
-
+                RecyclerView recyclerView = findViewById(R.id.recyclerViewRuns);
+                recyclerView.setLayoutManager(new LinearLayoutManager(context));
+                adapter = new RunsAdapter(context, runs);
+                adapter.setClickListener((RunsAdapter.ItemClickListener) context);
+                recyclerView.setAdapter(adapter);
             }
             @Override
             public void onFailed(String errorMessage) {
@@ -96,5 +107,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        print("You clicked " + adapter.getItem(position) + " on row number " + position);
     }
 }
