@@ -17,8 +17,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class FirebaseUtil {
 
-    public static UserModel user = null;
-
     private static final String TAG = "GoogleFirestore";
 
     public static String currentUserId(){
@@ -26,42 +24,15 @@ public class FirebaseUtil {
     }
 
     public static boolean isLoggedIn(){
-        if(currentUserId()!=null){
+        if(currentUserId() != null){
             return true;
         }
         return false;
     }
 
     public static void signOut() {
-        user = null;
         FirebaseAuth.getInstance().signOut();
         Log.d(TAG, "Signing out user");
     }
 
-    public static void loadUser(){
-        if (!isLoggedIn()) {
-            return;
-        }
-
-        DocumentReference documentReference = FirebaseFirestore.getInstance().collection("users").document(currentUserId());
-
-        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                try {
-                    user = documentSnapshot.toObject(UserModel.class);
-                    Log.d(TAG, user.getEmail());
-                } catch (RuntimeException exception) {
-                    Log.d(TAG, "The current user document cannot be assigned to the UserModel class");
-                    signOut();
-                }
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d(TAG, "Cannot get the current user document");
-                    }
-                });
-    }
 }

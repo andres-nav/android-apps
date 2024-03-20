@@ -18,6 +18,7 @@
     <string name="text_bronce_medal">Bronce Medal</string>
     <string name="text_login">Please login with your Google account to continue</string>
     <string name="text_welcome">Welcome to</string>
+    <string name="text_recent_runs">Recent runs:</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

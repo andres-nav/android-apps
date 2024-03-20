@@ -1,13 +1,14 @@
 package com.andresnav.trackmyshoes;
 
-import static com.andresnav.trackmyshoes.data.model.LeaderboardUtil.getLeaderboard;
+import static com.andresnav.trackmyshoes.utils.LeaderboardUtil.getLeaderboard;
+import static com.andresnav.trackmyshoes.utils.Utils.print;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import com.andresnav.trackmyshoes.data.model.LeaderboardUtil;
+import com.andresnav.trackmyshoes.data.model.LeaderboardModel;
+import com.andresnav.trackmyshoes.utils.LeaderboardUtil;
 
 
 public class LeaderboardActivity extends AppCompatActivity {
@@ -19,6 +20,17 @@ public class LeaderboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        getLeaderboard();
+        getLeaderboard(new LeaderboardUtil.LeaderboardCallback() {
+            @Override
+            public void onLeaderboardLoaded(LeaderboardModel leaderboard) {
+               print(String.valueOf(leaderboard.getGoldRunId()));
+            }
+
+            @Override
+            public void onFailed(String errorMessage) {
+                print(errorMessage);
+
+            }
+        });
     }
 }

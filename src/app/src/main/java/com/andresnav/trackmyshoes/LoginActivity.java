@@ -1,7 +1,5 @@
 package com.andresnav.trackmyshoes;
 
-import static com.andresnav.trackmyshoes.utils.FirebaseUtil.loadUser;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 

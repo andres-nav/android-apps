@@ -1,24 +1,21 @@
 package com.andresnav.trackmyshoes;
 
-import static com.andresnav.trackmyshoes.utils.FirebaseUtil.loadUser;
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
+import static com.andresnav.trackmyshoes.utils.UserUtil.getCurrentUser;
+import static com.andresnav.trackmyshoes.utils.Utils.print;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.andresnav.trackmyshoes.utils.FirebaseUtil;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.util.Log;
-import android.view.View;
-
 import androidx.navigation.ui.AppBarConfiguration;
 
+import com.andresnav.trackmyshoes.data.model.UserModel;
 import com.andresnav.trackmyshoes.databinding.ActivityMainBinding;
-
-import android.widget.TextView;
+import com.andresnav.trackmyshoes.utils.FirebaseUtil;
+import com.andresnav.trackmyshoes.utils.UserUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +31,17 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        loadUser();
+        getCurrentUser(new UserUtil.CurrentUserCallback() {
+            @Override
+            public void onUserLoaded(UserModel user) {
+               print(String.valueOf(user.getEmail()));
+            }
+
+            @Override
+            public void onFailed(String errorMessage) {
+
+            }
+        });
 
         textViewUserId = findViewById(R.id.textViewUserId);
         textViewUserId.setText(String.format("user_id: %s", FirebaseUtil.currentUserId()));
