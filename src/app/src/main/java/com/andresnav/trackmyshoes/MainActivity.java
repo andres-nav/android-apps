@@ -2,6 +2,7 @@ package com.andresnav.trackmyshoes;
 
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
 import static com.andresnav.trackmyshoes.utils.UserUtil.getCurrentUser;
+import static com.andresnav.trackmyshoes.utils.RunUtil.getRunsOfUser;
 import static com.andresnav.trackmyshoes.utils.Utils.print;
 
 import android.content.Intent;
@@ -12,10 +13,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 
+import com.andresnav.trackmyshoes.data.model.RunModel;
 import com.andresnav.trackmyshoes.data.model.UserModel;
 import com.andresnav.trackmyshoes.databinding.ActivityMainBinding;
 import com.andresnav.trackmyshoes.utils.FirebaseUtil;
+import com.andresnav.trackmyshoes.utils.RunUtil;
 import com.andresnav.trackmyshoes.utils.UserUtil;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +45,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailed(String errorMessage) {
 
+            }
+        });
+
+        getRunsOfUser(new RunUtil.RunsOfUserCallback() {
+            @Override
+            public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
+                print("runs: " + runs.size());
+
+            }
+            @Override
+            public void onFailed(String errorMessage) {
+                print(errorMessage);
             }
         });
 
