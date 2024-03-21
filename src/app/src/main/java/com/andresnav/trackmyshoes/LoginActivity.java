@@ -54,6 +54,10 @@ public class LoginActivity extends AppCompatActivity {
         binding.googleButton.setOnClickListener(v -> {
             signIn();
         });
+
+        binding.anonymousButton.setOnClickListener(v -> {
+            firebaseAuthWithAnonymous();
+        });
     }
 
     @Override
@@ -103,6 +107,25 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
     // [END auth_with_google]
+
+    private void firebaseAuthWithAnonymous(){
+        mAuth.signInAnonymously()
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(TAG, "signInWithCredential:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    Log.d(TAG, "signInWithCredential:success" + user);
+                                    updateUI(user);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w(TAG, "signInWithCredential:failure", task.getException());
+                                }
+                            }
+                });
+    }
 
     // [START signin]
     private void signIn() {
