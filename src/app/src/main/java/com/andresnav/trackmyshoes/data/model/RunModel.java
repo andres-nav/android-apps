@@ -56,4 +56,14 @@ public class RunModel {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "RunModel{" +
+                "name='" + name + '\'' +
+                ", timestamp=" + timestamp +
+                ", totalKm=" + totalKm +
+                ", totalTimeInMin=" + totalTimeInMin +
+                '}';
+    }
 }

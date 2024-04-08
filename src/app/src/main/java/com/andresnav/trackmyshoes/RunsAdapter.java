@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.andresnav.trackmyshoes.data.model.RunModel;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
@@ -35,7 +36,9 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String title = runs.get(position).getName();
+        String date = new SimpleDateFormat("dd/MM/yy").format(runs.get(position).getTimestamp().toDate());
         holder.textViewTitle.setText(title);
+        holder.textViewDate.setText(date);
     }
 
     // total number of rows
@@ -47,11 +50,12 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView textViewTitle;
+        TextView textViewTitle, textViewDate;
 
         ViewHolder(View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
+            textViewDate = itemView.findViewById(R.id.textViewDate);
             itemView.setOnClickListener(this);
         }
 

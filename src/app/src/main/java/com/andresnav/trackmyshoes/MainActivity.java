@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
             @Override
             public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
                 print("runs: " + runs.size());
+                for (RunModel i : runs) {
+                    print("run: " + i);
+                }
                 RecyclerView recyclerView = findViewById(R.id.recyclerViewRuns);
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
                 adapter = new RunsAdapter(context, runs);
