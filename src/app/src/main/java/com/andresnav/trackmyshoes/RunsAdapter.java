@@ -37,8 +37,10 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
     public void onBindViewHolder(ViewHolder holder, int position) {
         String title = runs.get(position).getName();
         String date = new SimpleDateFormat("dd/MM/yy").format(runs.get(position).getTimestamp().toDate());
+        String distance = String.format("%s km in %s mins", runs.get(position).getTotalKm(), runs.get(position).getTotalTimeInMin());
         holder.textViewTitle.setText(title);
         holder.textViewDate.setText(date);
+        holder.textViewDistance.setText(distance);
     }
 
     // total number of rows
@@ -50,12 +52,13 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView textViewTitle, textViewDate;
+        TextView textViewTitle, textViewDate, textViewDistance;
 
         ViewHolder(View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDate = itemView.findViewById(R.id.textViewDate);
+            textViewDistance = itemView.findViewById(R.id.textViewDistance);
             itemView.setOnClickListener(this);
         }
 

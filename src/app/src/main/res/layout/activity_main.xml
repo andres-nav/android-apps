@@ -31,10 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
             app:elevation="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/fabLeaderboard"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fabLeaderboard"
+            app:layout_constraintEnd_toStartOf="@+id/fabLeaderboard"
             app:srcCompat="@drawable/ic_weather" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -42,10 +42,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
             app:elevation="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/fabStart"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fabStart"
+            app:layout_constraintEnd_toStartOf="@+id/fabStart"
             app:srcCompat="@drawable/ic_leaderboard" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
