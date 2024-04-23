@@ -18,19 +18,20 @@ import java.util.List;
 @SuppressLint("MissingPermission")
 public class LocationProvider {
 
-    //1
     private FusedLocationProviderClient client;
     private AppCompatActivity activity;
 
-    //2
     private final List<LatLng> locations = new ArrayList<>();
 
-    //3
-    private final MutableLiveData<LatLng> liveLocation = new MutableLiveData<>();
+    final MutableLiveData<LatLng> liveLocation = new MutableLiveData<>();
 
     public LocationProvider(AppCompatActivity activity) {
         this.activity = activity;
         this.client = LocationServices.getFusedLocationProviderClient(activity);
+    }
+
+    public MutableLiveData<LatLng> getLiveLocation() {
+        return liveLocation;
     }
 
     //4
