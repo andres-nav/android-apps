@@ -36,25 +36,25 @@ public class WeatherActivity extends AppCompatActivity {
         imageViewToday = findViewById(R.id.imageViewToday);
 
         OpenWeatherApiUtils.getWeather(new OpenWeatherApiUtils.WeatherCallback() {
-        @Override
-        public void onSuccess(WeatherModel weather) {
-            textViewLocation.setText(String.valueOf(weather.getLocation()));
-            textViewCurrentTemperature.setText(String.format("%s °C", weather.getTemperatureNow()));
-            textViewFeelsLike.setText(String.format("%s °C", weather.getFeelsLikeNow()));
-            textViewWind.setText(String.format("%s km/h", weather.getWind()));
+            @Override
+            public void onSuccess(WeatherModel weather) {
+                textViewLocation.setText(String.valueOf(weather.getLocation()));
+                textViewCurrentTemperature.setText(String.format("%s °C", weather.getTemperatureNow()));
+                textViewFeelsLike.setText(String.format("%s °C", weather.getFeelsLikeNow()));
+                textViewWind.setText(String.format("%s km/h", weather.getWind()));
 
-            loadImage(imageViewToday, weather.getWeatherIcon());
+                int weatherStringId = weather.getWeatherStringId();
+                if (weatherStringId != 0) {
+                    textViewWeather.setText(getString(weatherStringId));
+                }
 
-            int weatherStringId = weather.getWeatherStringId();
-            if (weatherStringId != 0) {
-                textViewWeather.setText(getString(weatherStringId));
+                loadImage(imageViewToday, weather.getWeatherIcon());
             }
-        }
 
-        @Override
-        public void onFailed(String errorMessage) {
+            @Override
+            public void onFailed(String errorMessage) {
 
-        }
+            }
         });
 
     }
