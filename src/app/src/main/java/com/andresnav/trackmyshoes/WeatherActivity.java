@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.andresnav.trackmyshoes.data.model.WeatherModel;
 import com.andresnav.trackmyshoes.utils.OpenWeatherApiUtils;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +49,7 @@ public class WeatherActivity extends AppCompatActivity {
                     textViewWeather.setText(getString(weatherStringId));
                 }
 
-                loadImage(imageViewToday, weather.getWeatherIcon());
+                Picasso.get().load(String.format("https://openweathermap.org/img/wn/%s@2x.png", weather.getWeatherIcon())).into(imageViewToday);
             }
 
             @Override
@@ -57,27 +58,5 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void loadImage(final ImageView imageView, final String icon) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    URL url = new URL(String.format("https://openweathermap.org/img/wn/%s@2x.png", icon));
-                    final Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                    imageView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            imageView.setImageBitmap(bmp);
-                        }
-                    });
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        });
-
-        thread.start();
     }
 }
