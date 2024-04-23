@@ -56,4 +56,80 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="text_today">Today:</string>
+    <string name="text_current_temperature">Current Tempertature:</string>
+    <string name="text_feels_like">Feels Like:</string>
+    <string name="text_wind">Wind:</string>
+
+    <!-- Thunderstorm -->
+    <string name="thunderstorm_light_rain">thunderstorm with light rain</string>
+    <string name="thunderstorm_rain">thunderstorm with rain</string>
+    <string name="thunderstorm_heavy_rain">thunderstorm with heavy rain</string>
+    <string name="light_thunderstorm">light thunderstorm</string>
+    <string name="thunderstorm">thunderstorm</string>
+    <string name="heavy_thunderstorm">heavy thunderstorm</string>
+    <string name="ragged_thunderstorm">ragged thunderstorm</string>
+    <string name="thunderstorm_light_drizzle">thunderstorm with light drizzle</string>
+    <string name="thunderstorm_drizzle">thunderstorm with drizzle</string>
+    <string name="thunderstorm_heavy_drizzle">thunderstorm with heavy drizzle</string>
+
+    <!-- Drizzle -->
+    <string name="drizzle_light_intensity">light intensity drizzle</string>
+    <string name="drizzle">drizzle</string>
+    <string name="drizzle_heavy_intensity">heavy intensity drizzle</string>
+    <string name="drizzle_light_intensity_rain">light intensity drizzle rain</string>
+    <string name="drizzle_rain">drizzle rain</string>
+    <string name="drizzle_heavy_intensity_rain">heavy intensity drizzle rain</string>
+    <string name="shower_rain_and_drizzle">shower rain and drizzle</string>
+    <string name="heavy_shower_rain_and_drizzle">heavy shower rain and drizzle</string>
+    <string name="shower_drizzle">shower drizzle</string>
+
+    <!-- Rain -->
+    <string name="rain_light">light rain</string>
+    <string name="rain_moderate">moderate rain</string>
+    <string name="rain_heavy_intensity">heavy intensity rain</string>
+    <string name="rain_very_heavy">very heavy rain</string>
+    <string name="rain_extreme">extreme rain</string>
+    <string name="freezing_rain">freezing rain</string>
+    <string name="shower_rain_light_intensity">light intensity shower rain</string>
+    <string name="shower_rain">shower rain</string>
+    <string name="shower_rain_heavy_intensity">heavy intensity shower rain</string>
+    <string name="ragged_shower_rain">ragged shower rain</string>
+
+    <!-- Snow -->
+    <string name="snow_light">light snow</string>
+    <string name="snow">snow</string>
+    <string name="snow_heavy">heavy snow</string>
+    <string name="sleet">sleet</string>
+    <string name="shower_sleet_light">light shower sleet</string>
+    <string name="shower_sleet">shower sleet</string>
+    <string name="rain_and_snow_light">light rain and snow</string>
+    <string name="rain_and_snow">rain and snow</string>
+    <string name="shower_snow_light">light shower snow</string>
+    <string name="shower_snow">shower snow</string>
+    <string name="shower_snow_heavy">heavy shower snow</string>
+
+    <!-- Atmosphere -->
+    <string name="mist">mist</string>
+    <string name="smoke">smoke</string>
+    <string name="haze">haze</string>
+    <string name="sand_dust_whirls">sand/dust whirls</string>
+    <string name="fog">fog</string>
+    <string name="sand">sand</string>
+    <string name="dust">dust</string>
+    <string name="volcanic_ash">volcanic ash</string>
+    <string name="squalls">squalls</string>
+    <string name="tornado">tornado</string>
+
+    <!-- Clear -->
+    <string name="clear_sky">clear sky</string>
+
+    <!-- Clouds -->
+    <string name="few_clouds">few clouds</string>
+    <string name="scattered_clouds">scattered clouds</string>
+    <string name="broken_clouds">broken clouds</string>
+    <string name="overcast_clouds">overcast clouds</string>
+    <string name="text_weather">Weather:</string>
+
+
 </resources>
