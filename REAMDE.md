@@ -30,9 +30,9 @@
 - [ ] Weather
     - [x] create layout with views
     - [x] create button in the main view and link to the created layout
+    - [X] functionality of the api to get weather of a location
+    - [X] integrate info with the layout
     - [ ] ask for the current location if it does not have access
-    - [ ] functionality of the api to get weather of the current location
-    - [ ] integrate info with the layout
 
 - [ ] Leaderboard
     - [x] create layout with views

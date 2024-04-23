@@ -9,6 +9,7 @@
     <string name="previous">Previous</string>
     <string name="sign_out">Sign out</string>
     <string name="default_web_client_id">64:79:0F:35:DC:41:CB:39:78:87:25:EE:AE:68:E4:B7:3B:B5:7F:A1</string>
+    <string name="maps_api_key">AIzaSyDruOwI4lvDTvZY8DJdaQAYZbGK7jkby0s</string>
     <string name="text_current_location">Current location:</string>
     <string name="text_overview_of_the_week">Overview of the week:</string>
     <string name="text_check_out_leaderboard">Check out who is at the top!</string>

@@ -35,6 +35,8 @@ android {
     }
 }
 
+
+
 dependencies {
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
@@ -46,9 +48,17 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.0.0")
 
     implementation("com.google.firebase:firebase-firestore:24.10.3")
+
+    // API
     implementation("com.squareup.retrofit2:retrofit:2.4.0")
     implementation("com.squareup.retrofit2:converter-gson:2.4.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+
+    // Google maps
+    implementation("com.google.android.gms:play-services-maps:17.0.1")
+    implementation("com.google.android.gms:play-services-location:18.0.0")
+    implementation("com.google.maps.android:android-maps-utils:2.2.3")
+    implementation("com.google.maps.android:maps-utils-ktx:3.2.0")
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
