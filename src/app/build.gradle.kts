@@ -53,6 +53,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.4.0")
     implementation("com.squareup.retrofit2:converter-gson:2.4.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("org.conscrypt:conscrypt-android:2.2.1") // for TLS v1.3
+
 
     // Google maps
     implementation("com.google.android.gms:play-services-maps:17.0.1")

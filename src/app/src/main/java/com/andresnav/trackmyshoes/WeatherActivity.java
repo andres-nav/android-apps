@@ -15,8 +15,11 @@ import com.andresnav.trackmyshoes.data.model.WeatherModel;
 import com.andresnav.trackmyshoes.utils.OpenWeatherApiUtils;
 import com.squareup.picasso.Picasso;
 
+import org.conscrypt.Conscrypt;
+
 import java.io.IOException;
 import java.net.URL;
+import java.security.Security;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -49,6 +52,7 @@ public class WeatherActivity extends AppCompatActivity {
                     textViewWeather.setText(getString(weatherStringId));
                 }
 
+                Security.insertProviderAt(Conscrypt.newProvider(), 1); // To enable TLS v1.3 for API 28 and below
                 Picasso.get().load(String.format("https://openweathermap.org/img/wn/%s@2x.png", weather.getWeatherIcon())).into(imageViewToday);
             }
 

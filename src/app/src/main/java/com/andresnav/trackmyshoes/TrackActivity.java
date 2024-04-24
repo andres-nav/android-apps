@@ -28,12 +28,14 @@ import android.widget.TextView;
 
 import com.andresnav.trackmyshoes.utils.LocationService;
 
+import java.util.Objects;
+
 public class TrackActivity extends AppCompatActivity {
 
     private LocationService.LocationServiceBinder locationService;
 
     private TextView textViewDistanceRun, textViewDuration, textViewAvgSpeed;
-    private Button buttonStart, buttonStop, buttonSave;
+    private Button buttonStart, buttonPause, buttonSave;
 
     private static final int PERMISSION_GPS_CODE = 1;
 
@@ -46,7 +48,6 @@ public class TrackActivity extends AppCompatActivity {
             locationService = (LocationService.LocationServiceBinder) iBinder;
 
             // if currently tracking then enable stopButton and disable startButton
-            print("service connected");
             initButtons();
 
             new Thread(new Runnable() {
@@ -101,7 +102,7 @@ public class TrackActivity extends AppCompatActivity {
     private void initButtons() {
         // no permissions means no buttons
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            buttonStop.setEnabled(false);
+            buttonPause.setEnabled(false);
             buttonStart.setEnabled(false);
             buttonSave.setEnabled(false);
             return;
@@ -109,11 +110,11 @@ public class TrackActivity extends AppCompatActivity {
 
         // if currently tracking then enable stopButton and disable startButton
         if(locationService != null && locationService.currentlyTracking()) {
-            buttonStop.setEnabled(true);
+            buttonPause.setEnabled(true);
             buttonStart.setEnabled(false);
             buttonSave.setEnabled(false);
         } else {
-            buttonStop.setEnabled(false);
+            buttonPause.setEnabled(false);
             buttonStart.setEnabled(true);
             buttonSave.setEnabled(true);
         }
@@ -129,11 +130,11 @@ public class TrackActivity extends AppCompatActivity {
         textViewAvgSpeed = findViewById(R.id.textViewAvgSpeed);
 
         buttonStart = findViewById(R.id.buttonStart);
-        buttonStop = findViewById(R.id.buttonStop);
+        buttonPause = findViewById(R.id.buttonPause);
         buttonSave = findViewById(R.id.buttonSave);
 
         buttonStart.setEnabled(false);
-        buttonStop.setEnabled(false);
+        buttonPause.setEnabled(false);
         buttonSave.setEnabled(false);
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +142,22 @@ public class TrackActivity extends AppCompatActivity {
             public void onClick(View v) {
                 locationService.playJourney();
                 buttonStart.setEnabled(false);
-                buttonStop.setEnabled(true);
+                buttonPause.setEnabled(true);
+            }
+        });
+
+        buttonPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float distance = locationService.getDistance();
+                locationService.saveJourney();
+
+                buttonStart.setEnabled(false);
+                buttonPause.setEnabled(false);
+
+                DialogFragment modal = FinishedTrackingDialogue.newInstance(String.format("%.2f KM", distance));
+                modal.show(getSupportFragmentManager(), "Finished");
+
             }
         });
 
@@ -151,18 +167,6 @@ public class TrackActivity extends AppCompatActivity {
         bindService(
                 new Intent(this, LocationService.class), lsc, Context.BIND_AUTO_CREATE);
 
-    }
-
-    public void onClickStop(View view) {
-        // save the current journey to the database
-        float distance = locationService.getDistance();
-        locationService.saveJourney();
-
-        buttonStart.setEnabled(false);
-        buttonStop.setEnabled(false);
-
-        DialogFragment modal = FinishedTrackingDialogue.newInstance(String.format("%.2f KM", distance));
-        modal.show(getSupportFragmentManager(), "Finished");
     }
 
     @Override
@@ -193,11 +197,32 @@ public class TrackActivity extends AppCompatActivity {
                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // go back to home screen
-                            getActivity().finish();
+                            requireActivity().finish();
                         }
                     });
             // Create the AlertDialog object and return it
             return builder.create();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int reqCode, String[] permissions, int[] results) {
+        super.onRequestPermissionsResult(reqCode, permissions, results);
+        switch (reqCode) {
+            case PERMISSION_GPS_CODE:
+                if (results.length > 0 && results[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission granted
+                    initButtons();
+                    if (locationService != null) {
+                        locationService.notifyGPSEnabled();
+                    }
+                } else {
+                    // permission denied, disable GPS tracking buttons
+                    buttonPause.setEnabled(false);
+                    buttonStart.setEnabled(false);
+                    buttonSave.setEnabled(false);
+                }
+
         }
     }
 
@@ -232,9 +257,6 @@ public class TrackActivity extends AppCompatActivity {
         // if don't have GPS permissions then request this permission from the user.
         // if not granted the permission disable the start button
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            buttonStop.setEnabled(false);
-            buttonStart.setEnabled(false);
-            buttonSave.setEnabled(false);
 
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
                 // the user has already declined request to allow GPS
@@ -244,11 +266,6 @@ public class TrackActivity extends AppCompatActivity {
             } else {
                 // request the permission
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_GPS_CODE);
-            }
-        } else {
-            initButtons();
-            if (locationService != null) {
-                locationService.notifyGPSEnabled();
             }
         }
     }
