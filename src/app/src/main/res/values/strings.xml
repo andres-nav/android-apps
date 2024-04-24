@@ -131,6 +131,15 @@
     <string name="broken_clouds">broken clouds</string>
     <string name="overcast_clouds">overcast clouds</string>
     <string name="text_weather">Weather:</string>
+    <string name="text_distance_run" >Distance run:</string>
+    <string name="text_avg_speed">Average speed:</string>
+    <string name="text_duration">Duration:</string>
+    <string name="text_start">Start</string>
+    <string name="text_stop">Stop</string>
+    <string name="text_save">Save</string>
+    <string name="dialog_gps">GPS is required to track your journey!</string>
+    <string name="text_enable_gps">Enable GPS</string>
+    <string name="text_cancel">Cancel</string>
 
 
 </resources>

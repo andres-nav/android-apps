@@ -50,6 +50,11 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".utils.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>
