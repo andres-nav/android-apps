@@ -45,6 +45,8 @@
 # Important Todos
 
 # Resources
+https://www.kodeco.com/28767779-how-to-make-an-android-run-tracking-app][link]
+
 https://github.com/anmol-dhar/CodeClauseInternship_EasyAuthenticationApp/
 
 # Sign Report Gradle
