@@ -1,7 +1,10 @@
 package com.andresnav.trackmyshoes.data.model;
 
+import android.location.Location;
+
 import com.google.firebase.Timestamp;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,18 +14,16 @@ public class RunModel {
    private Timestamp timestamp;
    private Float totalKm;
    private Float totalTimeInMin;
+   private ArrayList<Location> track;
 
    // TODO: add something related to the track taken
 
-    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin) {
+    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, ArrayList<Location> track) {
         this.name = name;
         this.timestamp = timestamp;
         this.totalKm = totalKm;
         this.totalTimeInMin = totalTimeInMin;
-    }
-
-    public RunModel() {
-
+        this.track = track;
     }
 
     public Float getTotalKm() {
@@ -55,6 +56,14 @@ public class RunModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ArrayList<Location> getTrack() {
+        return this.track;
+    }
+
+    public void setTrack(ArrayList<Location> track) {
+        this.track = track;
     }
 
     @Override

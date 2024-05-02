@@ -1,5 +1,6 @@
 package com.andresnav.trackmyshoes.utils;
 
+import static com.andresnav.trackmyshoes.utils.RunUtil.saveRun;
 import static com.andresnav.trackmyshoes.utils.Utils.print;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -23,7 +24,12 @@ import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
+import com.andresnav.trackmyshoes.data.model.RunModel;
+import com.google.firebase.Timestamp;
+
+import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -138,24 +144,30 @@ public class LocationService extends Service {
 
     /* Save journey to the database and stop saving GPS locations, also removes the notification */
     protected void saveJourney() {
+
         // TODO save journey to database using content provider
         //ContentValues journeyData = new ContentValues();
         //journeyData.put(JourneyProviderContract.J_distance, getDistance());
+        String name = "random";
+        Timestamp today = new Timestamp(new Date());
+        float distance = getDistance();
+        float duration = (float) getDuration();
+        ArrayList<Location> track = locationListener.getLocations();
         //journeyData.put(JourneyProviderContract.J_DURATION, (long) getDuration());
         //journeyData.put(JourneyProviderContract.J_DATE, getDateTime());
+        RunModel run = new RunModel(name, today, distance, duration, track);
 
-        //long journeyID = Long.parseLong(getContentResolver().insert(JourneyProviderContract.JOURNEY_URI, journeyData).getLastPathSegment());
+        saveRun(run, new RunUtil.SaveRunCallback() {
+            @Override
+            public void onSuccess() {
 
-        // for each location belonging to this journey save it to the location table linked to this journey
-        //for(Location location : locationListener.getLocations()) {
-            //ContentValues locationData = new ContentValues();
-            //locationData.put(JourneyProviderContract.L_JID, journeyID);
-            //locationData.put(JourneyProviderContract.L_ALTITUDE, location.getAltitude());
-            //locationData.put(JourneyProviderContract.L_LATITUDE, location.getLatitude());
-            //locationData.put(JourneyProviderContract.L_LONGITUDE, location.getLongitude());
+            }
 
-            //getContentResolver().insert(JourneyProviderContract.LOCATION_URI, locationData);
-        //}
+            @Override
+            public void onFailure(String errorMessage) {
+
+            }
+        });
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(NOTIFICATION_ID);

@@ -55,4 +55,28 @@ public class RunUtil {
                     }
                 });
     }
+
+    public interface SaveRunCallback {
+        void onSuccess();
+        void onFailure(String errorMessage);
+    }
+
+    public static void saveRun(RunModel run, final SaveRunCallback callback) {
+        CollectionReference runsCollection = FirebaseFirestore.getInstance()
+                .collection(String.join("/", "users", FirebaseUtil.currentUserId(), "runs"));
+
+        runsCollection.add(run)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        callback.onSuccess();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        callback.onFailure("Failed to save the run: " + e.getMessage());
+                    }
+                });
+    }
 }
