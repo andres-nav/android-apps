@@ -29,6 +29,9 @@
             android:name=".LeaderboardActivity"
             android:exported="true" />
         <activity
+            android:name=".ShowRouteActivity"
+            android:exported="true" />
+        <activity
             android:name=".WeatherActivity"
             android:exported="true" />
         <activity
