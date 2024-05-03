@@ -70,7 +70,7 @@ public class ShowRouteActivity extends AppCompatActivity implements OnMapReadyCa
             googleMap.addPolyline(polylineOptions);
 
             // Move camera to the start point
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(startPoint, 15f));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(startPoint, 14f));
         }
     }
 }

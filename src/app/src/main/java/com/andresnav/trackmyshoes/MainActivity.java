@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
     private ActivityMainBinding binding;
 
     private TextView textViewUserId;
+    private RecyclerView recyclerView;
 
     private ArrayList<RunModel> userRuns;
+    private Context contextActivity;
 
     private RunsAdapter adapter;
 
@@ -55,28 +57,7 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
             }
         });
 
-        Context context = this;
-
-        getRunsOfUser(new RunUtil.RunsOfUserCallback() {
-            @Override
-            public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
-                userRuns = runs;
-
-                print("runs: " + runs.size());
-                for (RunModel i : runs) {
-                    print("run: " + i);
-                }
-                RecyclerView recyclerView = findViewById(R.id.recyclerViewRuns);
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-                adapter = new RunsAdapter(context, runs);
-                adapter.setClickListener((RunsAdapter.ItemClickListener) context);
-                recyclerView.setAdapter(adapter);
-            }
-            @Override
-            public void onFailed(String errorMessage) {
-                print(errorMessage);
-            }
-        });
+        contextActivity = this;
 
         textViewUserId = findViewById(R.id.textViewUserId);
         textViewUserId.setText(String.format("user_id: %s", FirebaseUtil.currentUserId()));
@@ -99,14 +80,6 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
             }
         });
 
-        binding.fabLeaderboard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LeaderboardActivity.class);
-                startActivity(intent);
-            }
-        });
-
         binding.fabWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,6 +87,32 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
                 startActivity(intent);
             }
         });
+    }
+
+    private void loadRuns() {
+        getRunsOfUser(new RunUtil.RunsOfUserCallback() {
+            @Override
+            public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
+                userRuns = runs;
+
+                recyclerView = findViewById(R.id.recyclerViewRuns);
+                recyclerView.setLayoutManager(new LinearLayoutManager(contextActivity));
+                adapter = new RunsAdapter(contextActivity, runs);
+                adapter.setClickListener((RunsAdapter.ItemClickListener) contextActivity);
+                recyclerView.setAdapter(adapter);
+            }
+            @Override
+            public void onFailed(String errorMessage) {
+                print(errorMessage);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadRuns();
     }
 
     @Override

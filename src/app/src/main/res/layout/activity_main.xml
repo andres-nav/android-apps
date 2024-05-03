@@ -33,20 +33,9 @@
             android:layout_gravity="bottom"
             android:layout_marginEnd="@dimen/fab_margin"
             app:elevation="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/fabLeaderboard"
-            app:layout_constraintEnd_toStartOf="@+id/fabLeaderboard"
+            app:layout_constraintBottom_toBottomOf="@id/fabStart"
+            app:layout_constraintEnd_toStartOf="@id/fabStart"
             app:srcCompat="@drawable/ic_weather" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabLeaderboard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="@dimen/fab_margin"
-            app:elevation="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/fabStart"
-            app:layout_constraintEnd_toStartOf="@+id/fabStart"
-            app:srcCompat="@drawable/ic_leaderboard" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabStart"

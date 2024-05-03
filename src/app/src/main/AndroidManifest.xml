@@ -26,9 +26,6 @@
             android:name=".TrackActivity"
             android:exported="true" />
         <activity
-            android:name=".LeaderboardActivity"
-            android:exported="true" />
-        <activity
             android:name=".ShowRouteActivity"
             android:exported="true" />
         <activity
