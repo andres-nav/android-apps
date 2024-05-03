@@ -12,6 +12,7 @@ import com.andresnav.trackmyshoes.data.model.RunModel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
 
@@ -36,7 +37,7 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String title = runs.get(position).getName();
-        String date = new SimpleDateFormat("dd/MM/yy").format(runs.get(position).getTimestamp().toDate());
+        String date = new SimpleDateFormat("dd/MM/yy").format(new Date(runs.get(position).getTimestamp()));
         String distance = String.format("%s km in %s mins", runs.get(position).getTotalKm(), runs.get(position).getTotalTimeInMin());
         holder.textViewTitle.setText(title);
         holder.textViewDate.setText(date);

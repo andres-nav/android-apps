@@ -6,14 +6,15 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.PropertyName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RunModel {
+public class RunModel implements Serializable {
     private String name;
-    private Timestamp timestamp;
+    private long timestamp;
     private double totalKm;
     private double totalTimeInMin;
     private List<Coordinate> track;
@@ -22,7 +23,7 @@ public class RunModel {
     public RunModel() {}
 
 
-    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, List<Coordinate> track) {
+    public RunModel(String name, long timestamp, Float totalKm, Float totalTimeInMin, List<Coordinate> track) {
         this.name = name;
         this.timestamp = timestamp;
         this.totalKm = totalKm;
@@ -30,7 +31,7 @@ public class RunModel {
         this.track = track;
     }
 
-    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, ArrayList<Location> track) {
+    public RunModel(String name, long timestamp, Float totalKm, Float totalTimeInMin, ArrayList<Location> track) {
         this.name = name;
         this.timestamp = timestamp;
         this.totalKm = totalKm;
@@ -58,11 +59,11 @@ public class RunModel {
         this.name = name;
     }
 
-    public Timestamp getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -102,7 +103,7 @@ public class RunModel {
     }
 
     // Nested class for coordinates
-    public static class Coordinate {
+    public static class Coordinate implements Serializable {
         private double latitude;
         private double longitude;
 

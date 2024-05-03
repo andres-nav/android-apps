@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
 
     private TextView textViewUserId;
 
+    private ArrayList<RunModel> userRuns;
+
     private RunsAdapter adapter;
 
     @Override
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
         getRunsOfUser(new RunUtil.RunsOfUserCallback() {
             @Override
             public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
+                userRuns = runs;
+
                 print("runs: " + runs.size());
                 for (RunModel i : runs) {
                     print("run: " + i);
@@ -115,5 +119,10 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
     @Override
     public void onItemClick(View view, int position) {
         print("You clicked " + adapter.getItem(position) + " on row number " + position);
+
+        Intent intent = new Intent(MainActivity.this, ShowRouteActivity.class);
+        RunModel runClicked = userRuns.get(position);
+        intent.putExtra(getString(R.string.run_serialize_string), runClicked);
+        startActivity(intent);
     }
 }

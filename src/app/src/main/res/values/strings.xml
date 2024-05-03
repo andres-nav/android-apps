@@ -142,6 +142,7 @@
     <string name="text_enable_gps">Enable GPS</string>
     <string name="text_cancel">Cancel</string>
     <string name="text_pause">Pause</string>
+    <string name="run_serialize_string">run</string>
 
 
 </resources>
