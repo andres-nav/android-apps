@@ -38,6 +38,7 @@ public class RunUtil {
                     public void onSuccess(QuerySnapshot querySnapshot) {
                         try {
                             for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                                print(String.format("document: %s", document.toString()));
                                 RunModel run = document.toObject(RunModel.class);
                                 runs.add(run);
                             }

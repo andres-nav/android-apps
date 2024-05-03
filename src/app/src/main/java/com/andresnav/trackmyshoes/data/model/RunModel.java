@@ -3,22 +3,26 @@ package com.andresnav.trackmyshoes.data.model;
 import android.location.Location;
 
 import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.Exclude;
+import com.google.firebase.firestore.PropertyName;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class RunModel {
+    private String name;
+    private Timestamp timestamp;
+    private double totalKm;
+    private double totalTimeInMin;
+    private List<Coordinate> track;
 
-   private String name;
-   private Timestamp timestamp;
-   private Float totalKm;
-   private Float totalTimeInMin;
-   private ArrayList<Location> track;
+    // Constructor
+    public RunModel() {}
 
-   // TODO: add something related to the track taken
 
-    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, ArrayList<Location> track) {
+    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, List<Coordinate> track) {
         this.name = name;
         this.timestamp = timestamp;
         this.totalKm = totalKm;
@@ -26,20 +30,32 @@ public class RunModel {
         this.track = track;
     }
 
-    public Float getTotalKm() {
-        return totalKm;
-    }
-
-    public void setTotalKm(Float totalKm) {
+    public RunModel(String name, Timestamp timestamp, Float totalKm, Float totalTimeInMin, ArrayList<Location> track) {
+        this.name = name;
+        this.timestamp = timestamp;
         this.totalKm = totalKm;
-    }
-
-    public Float getTotalTimeInMin() {
-        return totalTimeInMin;
-    }
-
-    public void setTotalTimeInMin(Float totalTimeInMin) {
         this.totalTimeInMin = totalTimeInMin;
+        this.track = convertLocationList(track);
+    }
+
+    public static List<Coordinate> convertLocationList(ArrayList<Location> locations) {
+        List<Coordinate> track = new ArrayList<>();
+        for (Location location : locations) {
+            Coordinate coordinate = new Coordinate();
+            coordinate.setLatitude(location.getLatitude());
+            coordinate.setLongitude(location.getLongitude());
+            track.add(coordinate);
+        }
+        return track;
+    }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Timestamp getTimestamp() {
@@ -50,21 +66,30 @@ public class RunModel {
         this.timestamp = timestamp;
     }
 
-    public String getName() {
-        return name;
+    public double getTotalKm() {
+        return totalKm;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTotalKm(double totalKm) {
+        this.totalKm = totalKm;
     }
 
-    public ArrayList<Location> getTrack() {
-        return this.track;
+    public double getTotalTimeInMin() {
+        return totalTimeInMin;
     }
 
-    public void setTrack(ArrayList<Location> track) {
+    public void setTotalTimeInMin(double totalTimeInMin) {
+        this.totalTimeInMin = totalTimeInMin;
+    }
+
+    public List<Coordinate> getTrack() {
+        return track;
+    }
+
+    public void setTrack(List<Coordinate> track) {
         this.track = track;
     }
+
 
     @Override
     public String toString() {
@@ -74,5 +99,31 @@ public class RunModel {
                 ", totalKm=" + totalKm +
                 ", totalTimeInMin=" + totalTimeInMin +
                 '}';
+    }
+
+    // Nested class for coordinates
+    public static class Coordinate {
+        private double latitude;
+        private double longitude;
+
+        // Constructor
+        public Coordinate() {}
+
+        // Getters and setters
+        public double getLatitude() {
+            return latitude;
+        }
+
+        public void setLatitude(double latitude) {
+            this.latitude = latitude;
+        }
+
+        public double getLongitude() {
+            return longitude;
+        }
+
+        public void setLongitude(double longitude) {
+            this.longitude = longitude;
+        }
     }
 }

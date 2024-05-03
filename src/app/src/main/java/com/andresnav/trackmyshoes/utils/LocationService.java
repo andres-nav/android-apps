@@ -151,7 +151,7 @@ public class LocationService extends Service {
         String name = "random";
         Timestamp today = new Timestamp(new Date());
         float distance = getDistance();
-        float duration = (float) getDuration();
+        float duration = (float) getDuration() / 60; // put it in min
         ArrayList<Location> track = locationListener.getLocations();
         //journeyData.put(JourneyProviderContract.J_DURATION, (long) getDuration());
         //journeyData.put(JourneyProviderContract.J_DATE, getDateTime());
