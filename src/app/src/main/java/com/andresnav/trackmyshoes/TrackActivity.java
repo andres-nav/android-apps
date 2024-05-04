@@ -1,10 +1,5 @@
 package com.andresnav.trackmyshoes;
 
-import static com.andresnav.trackmyshoes.utils.Utils.print;
-
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -28,14 +23,12 @@ import android.widget.TextView;
 
 import com.andresnav.trackmyshoes.utils.LocationService;
 
-import java.util.Objects;
-
 public class TrackActivity extends AppCompatActivity {
 
     private LocationService.LocationServiceBinder locationService;
 
     private TextView textViewDistanceRun, textViewDuration, textViewAvgSpeed;
-    private Button buttonStart, buttonPause, buttonSave;
+    private Button buttonStart, buttonStop;
 
     private static final int PERMISSION_GPS_CODE = 1;
 
@@ -83,7 +76,7 @@ public class TrackActivity extends AppCompatActivity {
                         });
 
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(1000);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -102,21 +95,18 @@ public class TrackActivity extends AppCompatActivity {
     private void initButtons() {
         // no permissions means no buttons
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            buttonPause.setEnabled(false);
             buttonStart.setEnabled(false);
-            buttonSave.setEnabled(false);
+            buttonStop.setEnabled(false);
             return;
         }
 
         // if currently tracking then enable stopButton and disable startButton
         if(locationService != null && locationService.currentlyTracking()) {
-            buttonPause.setEnabled(true);
             buttonStart.setEnabled(false);
-            buttonSave.setEnabled(false);
+            buttonStop.setEnabled(true);
         } else {
-            buttonPause.setEnabled(false);
             buttonStart.setEnabled(true);
-            buttonSave.setEnabled(true);
+            buttonStop.setEnabled(false);
         }
     }
 
@@ -125,35 +115,36 @@ public class TrackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track);
 
+        setSupportActionBar(findViewById(R.id.toolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         textViewDistanceRun = findViewById(R.id.textViewDistanceRun);
         textViewDuration = findViewById(R.id.textViewDuration);
         textViewAvgSpeed = findViewById(R.id.textViewAvgSpeed);
 
         buttonStart = findViewById(R.id.buttonStart);
-        buttonPause = findViewById(R.id.buttonPause);
-        buttonSave = findViewById(R.id.buttonSave);
+        buttonStop = findViewById(R.id.buttonStop);
 
         buttonStart.setEnabled(false);
-        buttonPause.setEnabled(false);
-        buttonSave.setEnabled(false);
+        buttonStop.setEnabled(false);
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 locationService.playJourney();
                 buttonStart.setEnabled(false);
-                buttonPause.setEnabled(true);
+                buttonStop.setEnabled(true);
             }
         });
 
-        buttonPause.setOnClickListener(new View.OnClickListener() {
+        buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 float distance = locationService.getDistance();
                 locationService.saveJourney();
 
                 buttonStart.setEnabled(false);
-                buttonPause.setEnabled(false);
+                buttonStop.setEnabled(false);
 
                 DialogFragment modal = FinishedTrackingDialogue.newInstance(String.format("%.2f KM", distance));
                 modal.show(getSupportFragmentManager(), "Finished");
@@ -218,9 +209,8 @@ public class TrackActivity extends AppCompatActivity {
                     }
                 } else {
                     // permission denied, disable GPS tracking buttons
-                    buttonPause.setEnabled(false);
                     buttonStart.setEnabled(false);
-                    buttonSave.setEnabled(false);
+                    buttonStop.setEnabled(false);
                 }
 
         }

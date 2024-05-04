@@ -2,7 +2,6 @@ package com.andresnav.trackmyshoes.utils;
 
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.currentUserId;
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.isLoggedIn;
-import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
 import static com.andresnav.trackmyshoes.utils.Utils.print;
 
 import androidx.annotation.NonNull;

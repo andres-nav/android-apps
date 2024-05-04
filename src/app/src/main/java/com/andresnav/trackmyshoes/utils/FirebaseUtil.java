@@ -30,7 +30,7 @@ public class FirebaseUtil {
         return false;
     }
 
-    public static void signOut() {
+    public static void signOutFirebase() {
         FirebaseAuth.getInstance().signOut();
         Log.d(TAG, "Signing out user");
     }

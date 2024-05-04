@@ -1,6 +1,6 @@
 package com.andresnav.trackmyshoes;
 
-import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
+import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOutFirebase;
 import static com.andresnav.trackmyshoes.utils.UserUtil.getCurrentUser;
 import static com.andresnav.trackmyshoes.utils.RunUtil.getRunsOfUser;
 import static com.andresnav.trackmyshoes.utils.Utils.print;
@@ -8,6 +8,8 @@ import static com.andresnav.trackmyshoes.utils.Utils.print;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setSupportActionBar(findViewById(R.id.toolbar));
 
         getCurrentUser(new UserUtil.CurrentUserCallback() {
             @Override
@@ -59,18 +62,6 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
 
         contextActivity = this;
 
-        textViewUserId = findViewById(R.id.textViewUserId);
-        textViewUserId.setText(String.format("user_id: %s", FirebaseUtil.currentUserId()));
-
-        binding.buttonSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-                Intent intent = new Intent(MainActivity.this, SplashScreen.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         binding.fabStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,5 +114,24 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
         RunModel runClicked = userRuns.get(position);
         intent.putExtra(getString(R.string.run_serialize_string), runClicked);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu); // Inflate the menu resource
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        if (item.getItemId() == R.id.item_signout) {
+            signOutFirebase();
+            Intent intent = new Intent(MainActivity.this, SplashScreen.class);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

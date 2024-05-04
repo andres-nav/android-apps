@@ -24,13 +24,17 @@
 
         <activity
             android:name=".TrackActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".ShowRouteActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".WeatherActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -54,6 +58,7 @@
             android:name=".utils.LocationService"
             android:enabled="true"
             android:exported="true" />
+
 
     </application>
 

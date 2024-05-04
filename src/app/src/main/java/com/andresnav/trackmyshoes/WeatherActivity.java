@@ -10,6 +10,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.andresnav.trackmyshoes.data.model.WeatherModel;
 import com.andresnav.trackmyshoes.utils.OpenWeatherApiUtils;
@@ -30,6 +31,9 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+        setSupportActionBar(findViewById(R.id.toolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         textViewWeather = findViewById(R.id.textViewWeather);
         textViewLocation = findViewById(R.id.textViewLocation);

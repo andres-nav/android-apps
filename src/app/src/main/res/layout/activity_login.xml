@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/fab_margin"
+    android:paddingHorizontal="@dimen/fab_margin"
     tools:context=".LoginActivity">
 
     <TextView
@@ -63,6 +64,7 @@
             android:layout_height="@android:dimen/app_icon_size"
             android:layout_marginTop="@dimen/fab_margin"
             android:background="@color/white"
+            android:paddingHorizontal="@dimen/fab_margin"
             android:scaleType="centerInside"
             android:src="@drawable/ic_user" />
     </LinearLayout>

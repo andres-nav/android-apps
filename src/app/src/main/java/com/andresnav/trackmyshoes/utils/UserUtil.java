@@ -2,7 +2,7 @@ package com.andresnav.trackmyshoes.utils;
 
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.currentUserId;
 import static com.andresnav.trackmyshoes.utils.FirebaseUtil.isLoggedIn;
-import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOut;
+import static com.andresnav.trackmyshoes.utils.FirebaseUtil.signOutFirebase;
 
 import android.util.Log;
 
@@ -38,7 +38,7 @@ public class UserUtil {
                             callback.onUserLoaded(user);
                         } catch (RuntimeException exception) {
                             callback.onFailed("The current user document cannot be assigned to the UserModel class");
-                            signOut();
+                            signOutFirebase();
                         }
                     }
                 })
