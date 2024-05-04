@@ -37,7 +37,7 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String title = runs.get(position).getTimestampString();
-        String date = new SimpleDateFormat("dd/MM/yy").format(new Date(runs.get(position).getTimestamp()));
+        String date = runs.get(position).getSpeedString();
         String distance = String.format("%s km in %s", runs.get(position).getTotalKmRounded(), runs.get(position).getTimeInString());
         holder.textViewTitle.setText(title);
         holder.textViewDate.setText(date);

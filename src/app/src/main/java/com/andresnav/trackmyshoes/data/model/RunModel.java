@@ -119,6 +119,22 @@ public class RunModel implements Serializable {
         this.totalTimeInMin = totalTimeInMin;
     }
 
+    public double getSpeed() {
+        double timeInHours = this.totalTimeInMin / 60;
+        return(this.totalKm / (timeInHours));
+    }
+
+    public String getSpeedString() {
+        double timeInHours = this.totalTimeInMin / 60;
+        double speed = this.totalKm / (timeInHours);
+
+        if (speed == 0 || Double.isNaN(speed)) {
+            return "";
+        }
+
+        return String.format("%.2f km/h", speed);
+    }
+
     public List<Coordinate> getTrack() {
         return track;
     }
