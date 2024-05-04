@@ -8,8 +8,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="sign_out">Sign out</string>
-    <string name="default_web_client_id">64:79:0F:35:DC:41:CB:39:78:87:25:EE:AE:68:E4:B7:3B:B5:7F:A1</string>
-    <string name="maps_api_key">AIzaSyDruOwI4lvDTvZY8DJdaQAYZbGK7jkby0s</string>
+    <string name="default_web_client_id" translatable="false">64:79:0F:35:DC:41:CB:39:78:87:25:EE:AE:68:E4:B7:3B:B5:7F:A1</string>
+    <string name="maps_api_key" translatable="false">AIzaSyDruOwI4lvDTvZY8DJdaQAYZbGK7jkby0s</string>
     <string name="text_current_location">Current location:</string>
     <string name="text_overview_of_the_week">Overview of the week:</string>
     <string name="text_check_out_leaderboard">Check out who is at the top!</string>
@@ -21,7 +21,7 @@
     <string name="text_welcome">Welcome to</string>
     <string name="text_recent_runs">Recent runs:</string>
 
-    <string name="lorem_ipsum">
+    <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
         dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
@@ -142,14 +142,13 @@
     <string name="text_enable_gps">Enable GPS</string>
     <string name="text_cancel">Cancel</string>
     <string name="text_pause">Pause</string>
-    <string name="run_serialize_string">run</string>
+    <string name="run_serialize_string" translatable="false">run</string>
     <string name="text_by">By:</string>
     <string name="text_andres">Andres Navarro</string>
     <string name="text_alejo">Alejo Gonzalez</string>
     <string name="text_daniel">Daniel Toribio</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_runs">Runs:</string>
+    <string name="text_runs">Runs</string>
 
 
 </resources>

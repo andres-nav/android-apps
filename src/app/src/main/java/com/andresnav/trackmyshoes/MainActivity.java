@@ -26,6 +26,8 @@ import com.andresnav.trackmyshoes.utils.RunUtil;
 import com.andresnav.trackmyshoes.utils.UserUtil;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemClickListener {
 
@@ -84,6 +86,9 @@ public class MainActivity extends AppCompatActivity implements RunsAdapter.ItemC
         getRunsOfUser(new RunUtil.RunsOfUserCallback() {
             @Override
             public void onRunsOfUserLoaded(ArrayList<RunModel> runs) {
+                // Sort the runs by timestamp (most recent first)
+                runs.sort(Comparator.comparingLong(RunModel::getTimestamp).reversed());
+
                 userRuns = runs;
 
                 recyclerView = findViewById(R.id.recyclerViewRuns);

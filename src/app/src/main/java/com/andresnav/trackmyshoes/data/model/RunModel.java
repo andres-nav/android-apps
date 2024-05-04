@@ -7,7 +7,9 @@ import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.PropertyName;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -63,12 +65,28 @@ public class RunModel implements Serializable {
         return timestamp;
     }
 
+    public String getTimestampString() {
+        Date date = new Date(this.timestamp);
+
+        // Format the date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy HH:mm");
+
+        // Convert date to string
+        return dateFormat.format(date);
+    }
+
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 
+
+
     public double getTotalKm() {
         return totalKm;
+    }
+
+    public String getTotalKmRounded() {
+        return String.format("%.2f", totalKm);
     }
 
     public void setTotalKm(double totalKm) {
@@ -77,6 +95,24 @@ public class RunModel implements Serializable {
 
     public double getTotalTimeInMin() {
         return totalTimeInMin;
+    }
+
+    public String getTimeInString() {
+        int minutes = (int) totalTimeInMin;
+        double fractionOfMinute = totalTimeInMin - minutes;
+        int seconds = (int) (fractionOfMinute * 60);
+
+        String formattedDuration;
+        if (minutes == 0) {
+            formattedDuration = String.format("%d sec", seconds);
+        } else {
+            formattedDuration = String.format("%d min", minutes);
+            if (seconds != 0) {
+                formattedDuration += String.format(" %d sec", seconds);
+            }
+        }
+
+        return formattedDuration;
     }
 
     public void setTotalTimeInMin(double totalTimeInMin) {

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Track My Shoes</string>
+    <string name="title_activity_login">Acceso</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="first_fragment_label">Primer Fragmento</string>
+    <string name="second_fragment_label">Segundo Fragmento</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="sign_out">Salir</string>
+    <string name="text_current_location">"Posición actual "</string>
+    <string name="text_overview_of_the_week">Resumen de la semana:</string>
+    <string name="text_check_out_leaderboard">"Revisa quién está en la cima "</string>
+    <string name="text_category">Categoría:</string>
+    <string name="text_gold_medal">Medalla de Oro</string>
+    <string name="text_silver_medal">Medalla de Plata</string>
+    <string name="text_bronce_medal">Medalla de Bronce</string>
+    <string name="text_login">"Por favor inicie sesión con su cuenta de Google para continuar "</string>
+    <string name="text_welcome">Bienvenido</string>
+    <string name="text_recent_runs">"Carreras recientes "</string>
+    <string name="text_today">Hoy:</string>
+    <string name="text_current_temperature">Temperatura Actual:</string>
+    <string name="text_feels_like">"Sensación Térmica: "</string>
+    <string name="text_wind">Viento:</string>
+
+
+    <!-- Tormenta eléctrica -->
+    <string name="thunderstorm_light_rain">tormenta eléctrica con lluvia ligera</string>
+    <string name="thunderstorm_rain">tormenta eléctrica con lluvia</string>
+    <string name="thunderstorm_heavy_rain">tormenta eléctrica con lluvia intensa</string>
+    <string name="light_thunderstorm">tormenta eléctrica ligera</string>
+    <string name="thunderstorm">tormenta eléctrica</string>
+    <string name="heavy_thunderstorm">tormenta eléctrica intensa</string>
+    <string name="ragged_thunderstorm">tormenta eléctrica dispersa</string>
+    <string name="thunderstorm_light_drizzle">tormenta eléctrica con llovizna ligera</string>
+    <string name="thunderstorm_drizzle">tormenta eléctrica con llovizna</string>
+    <string name="thunderstorm_heavy_drizzle">tormenta eléctrica con llovizna intensa</string>
+
+    <!-- Llovizna -->
+    <string name="drizzle_light_intensity">llovizna de intensidad ligera</string>
+    <string name="drizzle">llovizna</string>
+    <string name="drizzle_heavy_intensity">llovizna de intensidad fuerte</string>
+    <string name="drizzle_light_intensity_rain">llovizna de intensidad ligera con lluvia</string>
+    <string name="drizzle_rain">llovizna con lluvia</string>
+    <string name="drizzle_heavy_intensity_rain">llovizna de intensidad fuerte con lluvia</string>
+    <string name="shower_rain_and_drizzle">lluvia y llovizna</string>
+    <string name="heavy_shower_rain_and_drizzle">lluvia intensa y llovizna</string>
+    <string name="shower_drizzle">llovizna de ducha</string>
+
+    <!-- Lluvia -->
+    <string name="rain_light">lluvia ligera</string>
+    <string name="rain_moderate">lluvia moderada</string>
+    <string name="rain_heavy_intensity">lluvia de intensidad fuerte</string>
+    <string name="rain_very_heavy">lluvia muy intensa</string>
+    <string name="rain_extreme">lluvia extrema</string>
+    <string name="freezing_rain">lluvia helada</string>
+    <string name="shower_rain_light_intensity">lluvia de ducha de intensidad ligera</string>
+    <string name="shower_rain">lluvia de ducha</string>
+    <string name="shower_rain_heavy_intensity">lluvia de ducha de intensidad fuerte</string>
+    <string name="ragged_shower_rain">lluvia de ducha irregular</string>
+
+    <!-- Nieve -->
+    <string name="snow_light">nieve ligera</string>
+    <string name="snow">nieve</string>
+    <string name="snow_heavy">nieve intensa</string>
+    <string name="sleet">aguanieve</string>
+    <string name="shower_sleet_light">aguaniesta ligera</string>
+    <string name="shower_sleet">aguaniesta</string>
+    <string name="rain_and_snow_light">lluvia y nieve ligera</string>
+    <string name="rain_and_snow">lluvia y nieve</string>
+    <string name="shower_snow_light">nieve de ducha ligera</string>
+    <string name="shower_snow">nieve de ducha</string>
+    <string name="shower_snow_heavy">nieve de ducha intensa</string>
+
+    <!-- Atmósfera -->
+    <string name="mist">niebla</string>
+    <string name="smoke">humo</string>
+    <string name="haze">bruma</string>
+    <string name="sand_dust_whirls">remolinos de arena/polvo</string>
+    <string name="fog">niebla</string>
+    <string name="sand">arena</string>
+    <string name="dust">polvo</string>
+    <string name="volcanic_ash">ceniza volcánica</string>
+    <string name="squalls">ráfagas</string>
+    <string name="tornado">tornado</string>
+
+    <!-- Despejado -->
+    <string name="clear_sky">cielo despejado</string>
+
+    <!-- Nubes -->
+    <string name="few_clouds">pocas nubes</string>
+    <string name="scattered_clouds">nubes dispersas</string>
+    <string name="broken_clouds">nubes rotas</string>
+    <string name="overcast_clouds">nublado</string>
+
+    <string name="text_weather">Tiempo:</string>
+    <string name="text_distance_run">Distancia recorrida:</string>
+    <string name="text_avg_speed">Velocidad promedio:</string>
+    <string name="text_duration">Duración:</string>
+    <string name="text_start">Iniciar</string>
+    <string name="text_stop">Detener</string>
+    <string name="text_save">Guardar</string>
+    <string name="dialog_gps">¡Se requiere GPS para rastrear tu viaje!</string>
+    <string name="text_enable_gps">Activar GPS</string>
+    <string name="text_cancel">Cancelar</string>
+    <string name="text_pause">Pausa</string>
+    <string name="text_by">Por:</string>
+    <string name="text_andres">Andres Navarro</string>
+    <string name="text_alejo">Alejo Gonzalez</string>
+    <string name="text_daniel">Daniel Toribio</string>
+    <string name="text_runs">Carreras</string>
+</resources>

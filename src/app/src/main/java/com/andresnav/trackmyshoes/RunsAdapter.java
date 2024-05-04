@@ -36,9 +36,9 @@ public class RunsAdapter extends RecyclerView.Adapter<RunsAdapter.ViewHolder>{
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String title = runs.get(position).getName();
+        String title = runs.get(position).getTimestampString();
         String date = new SimpleDateFormat("dd/MM/yy").format(new Date(runs.get(position).getTimestamp()));
-        String distance = String.format("%s km in %s mins", runs.get(position).getTotalKm(), runs.get(position).getTotalTimeInMin());
+        String distance = String.format("%s km in %s", runs.get(position).getTotalKmRounded(), runs.get(position).getTimeInString());
         holder.textViewTitle.setText(title);
         holder.textViewDate.setText(date);
         holder.textViewDistance.setText(distance);
