@@ -64,7 +64,6 @@ public class OpenWeatherApiUtils  {
     }
 
     private static void getWeatherFromCity(String city, final WeatherCallback callback) {
-        print(city);
         if (city.isEmpty()) {
             callback.onFailed("Cannot detect the city");
         }
