@@ -155,19 +155,21 @@ public class LocationService extends Service {
         ArrayList<Location> track = locationListener.getLocations();
         //journeyData.put(JourneyProviderContract.J_DURATION, (long) getDuration());
         //journeyData.put(JourneyProviderContract.J_DATE, getDateTime());
-        RunModel run = new RunModel(name, today, distance, duration, track);
+        if (distance != 0) {
+            RunModel run = new RunModel(name, today, distance, duration, track);
 
-        saveRun(run, new RunUtil.SaveRunCallback() {
-            @Override
-            public void onSuccess() {
+            saveRun(run, new RunUtil.SaveRunCallback() {
+                @Override
+                public void onSuccess() {
 
-            }
+                }
 
-            @Override
-            public void onFailure(String errorMessage) {
+                @Override
+                public void onFailure(String errorMessage) {
 
-            }
-        });
+                }
+            });
+        }
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(NOTIFICATION_ID);

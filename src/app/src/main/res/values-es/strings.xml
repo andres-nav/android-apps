@@ -109,4 +109,10 @@
     <string name="text_alejo">Alejo Gonzalez</string>
     <string name="text_daniel">Daniel Toribio</string>
     <string name="text_runs">Carreras</string>
+    <string name="text_click_info">Pincha para más información</string>
+    <string name="text_run_finish">Tu recorrido se ha guardado. Has corrido un total de </string>
+
+    <string name="text_km">km</string>
+
+    <string name="dialog_weather">¡El GPS es necesario para obtener el tiempo en tu locaclización actual!</string>
 </resources>

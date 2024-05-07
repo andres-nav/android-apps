@@ -1,9 +1,21 @@
 package com.andresnav.trackmyshoes.utils;
 
+import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+
 import static com.andresnav.trackmyshoes.utils.Utils.print;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.andresnav.trackmyshoes.data.model.WeatherApi;
 import com.andresnav.trackmyshoes.data.model.WeatherModel;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,8 +32,42 @@ public class OpenWeatherApiUtils  {
         void onFailed(String errorMessage);
     }
 
-    public static void getWeather(final WeatherCallback callback) {
-        String city = "Madrid";
+
+    public static void getWeather(AppCompatActivity context, final WeatherCallback callback) {
+        LocationProvider locationProvider = new LocationProvider(context);
+
+        locationProvider.getCurrentLocation(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                print(String.format("location %s", location));
+                if (location != null) {
+                    Geocoder geocoder = new Geocoder(context, Locale.getDefault());
+                    List<Address> addresses = null;
+                    try {
+                        addresses = geocoder.getFromLocation(
+                                location.getLatitude(),
+                                location.getLongitude(),
+                                1);
+
+                        if (!addresses.isEmpty()) {
+                            String city = addresses.get(0).getLocality();
+                            getWeatherFromCity(city, callback);
+                        }
+                    } catch (IOException e) {
+                        print("error");
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+        });
+
+    }
+
+    private static void getWeatherFromCity(String city, final WeatherCallback callback) {
+        print(city);
+        if (city.isEmpty()) {
+            callback.onFailed("Cannot detect the city");
+        }
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(OPEN_WEATHER)
@@ -42,6 +88,7 @@ public class OpenWeatherApiUtils  {
                 callback.onFailed("Error fetching weather");
             }
         });
+
     }
 }
 

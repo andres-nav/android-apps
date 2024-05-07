@@ -149,6 +149,9 @@
     <string name="text_daniel">Daniel Toribio</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="text_runs">Runs</string>
+    <string name="text_click_info">Click for more info</string>
+    <string name="text_run_finish">Your Journey has been saved. You ran a total of </string>
+    <string name="text_km">km</string>
 
-
+    <string name="dialog_weather">GPS is required to check the weather in your current location!</string>
 </resources>

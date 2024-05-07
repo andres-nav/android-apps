@@ -28,17 +28,20 @@ public class LocationProvider {
 
     private final List<LatLng> locations = new ArrayList<>();
 
+
     private float distance = 0;
 
     final MutableLiveData<LatLng> liveLocation = new MutableLiveData<>();
     final MutableLiveData<List<LatLng>> liveLocations = new MutableLiveData<>();
     final MutableLiveData<Float> liveDistance = new MutableLiveData<>();
 
+    Location currentLocation;
+
 
     private LocationCallback locationCallback = new LocationCallback() {
         @Override
         public void onLocationResult(LocationResult result) {
-            Location currentLocation = result.getLastLocation();
+            currentLocation = result.getLastLocation();
             LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
 
             LatLng lastLocation = locations.isEmpty() ? null : locations.get(locations.size() - 1);
@@ -68,6 +71,11 @@ public class LocationProvider {
 
     public MutableLiveData<Float> getLiveDistance() {
         return liveDistance;
+    }
+
+    public void getCurrentLocation(OnSuccessListener<Location> listener) {
+        Task<android.location.Location> locationTask = client.getLastLocation();
+        locationTask.addOnSuccessListener(activity, listener);
     }
 
     public void trackUser() {

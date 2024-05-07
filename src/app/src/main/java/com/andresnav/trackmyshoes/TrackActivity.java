@@ -31,6 +31,7 @@ public class TrackActivity extends AppCompatActivity {
     private Button buttonStart, buttonStop;
 
     private static final int PERMISSION_GPS_CODE = 1;
+    private static final String DISTANCE_KEY = "distance";
 
     // will poll the location service for distance and duration
     private Handler postBack = new Handler();
@@ -148,7 +149,6 @@ public class TrackActivity extends AppCompatActivity {
 
                 DialogFragment modal = FinishedTrackingDialogue.newInstance(String.format("%.2f KM", distance));
                 modal.show(getSupportFragmentManager(), "Finished");
-
             }
         });
 
@@ -174,7 +174,7 @@ public class TrackActivity extends AppCompatActivity {
     public static class FinishedTrackingDialogue extends DialogFragment {
         public static  FinishedTrackingDialogue newInstance(String distance) {
             Bundle savedInstanceState = new Bundle();
-            savedInstanceState.putString("distance", distance);
+            savedInstanceState.putString(DISTANCE_KEY, distance);
             FinishedTrackingDialogue frag = new FinishedTrackingDialogue();
             frag.setArguments(savedInstanceState);
             return frag;
@@ -184,7 +184,7 @@ public class TrackActivity extends AppCompatActivity {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Your Journey has been saved. You ran a total of " + getArguments().getString("distance") + " KM")
+            builder.setMessage(String.format("%s %s %s.", getString(R.string.text_run_finish), getArguments().getString(DISTANCE_KEY), getString(R.string.text_km) ))
                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // go back to home screen
