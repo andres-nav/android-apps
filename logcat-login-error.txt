@@ -1,0 +1,74 @@
+--------- beginning of system
+--------- beginning of main
+2024-05-08 19:20:45.934 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           I  Late-enabling -Xcheck:jni
+2024-05-08 19:20:46.290 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           E  Unknown bits set in runtime_flags: 0x8000
+2024-05-08 19:20:46.299 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           W  Unexpected CPU variant for X86 using defaults: x86
+2024-05-08 19:20:46.983 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           I  The ClassLoaderContext is a special shared library.
+2024-05-08 19:20:48.943 26874-26874 FirebaseApp             com.andresnav.trackmyshoes           I  Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+2024-05-08 19:20:48.958 26874-26874 FirebaseInitProvider    com.andresnav.trackmyshoes           I  FirebaseApp initialization successful
+2024-05-08 19:20:49.057 26874-26913 FileUtils               com.andresnav.trackmyshoes           W  Failed to chmod(/data/user/0/com.andresnav.trackmyshoes/shared_prefs/FirebaseHeartBeatW0RFRkFVTFRd+MTo4MzMxOTAwNDg4ODphbmRyb2lkOjA4ZWZkNDg2ZTU1MDExMmVjNjgxYWQ.xml): android.system.ErrnoException: chmod failed: EACCES (Permission denied)
+2024-05-08 19:20:49.341 26874-26874 AppCompatDelegate       com.andresnav.trackmyshoes           D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-05-08 19:20:49.343 26874-26918 libEGL                  com.andresnav.trackmyshoes           D  Emulator has host GPU support, qemu.gles is set to 1.
+2024-05-08 19:20:49.356 26874-26918 libc                    com.andresnav.trackmyshoes           W  Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+2024-05-08 19:20:49.491 26874-26918 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libEGL_emulation.so
+2024-05-08 19:20:49.494 26874-26918 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libGLESv1_CM_emulation.so
+2024-05-08 19:20:49.498 26874-26918 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libGLESv2_emulation.so
+2024-05-08 19:20:49.331 26874-26874 RenderThread            com.andresnav.trackmyshoes           W  type=1400 audit(0.0:143): avc: denied { write } for name="property_service" dev="tmpfs" ino=6967 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0
+2024-05-08 19:20:49.644 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           W  Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+2024-05-08 19:20:49.645 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2024-05-08 19:20:49.752 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           I  Waiting for a blocking GC ClassLinker
+2024-05-08 19:20:49.811 26874-26874 av.trackmyshoe          com.andresnav.trackmyshoes           I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 59.174ms
+2024-05-08 19:20:50.465 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           I  Late-enabling -Xcheck:jni
+2024-05-08 19:20:50.532 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           E  Unknown bits set in runtime_flags: 0x8000
+2024-05-08 19:20:50.532 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           W  Unexpected CPU variant for X86 using defaults: x86
+2024-05-08 19:20:50.746 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           I  The ClassLoaderContext is a special shared library.
+2024-05-08 19:20:51.190 26955-26955 FirebaseApp             com.andresnav.trackmyshoes           I  Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+2024-05-08 19:20:51.201 26955-26955 FirebaseInitProvider    com.andresnav.trackmyshoes           I  FirebaseApp initialization successful
+2024-05-08 19:20:51.331 26955-26955 RenderThread            com.andresnav.trackmyshoes           W  type=1400 audit(0.0:144): avc: denied { write } for name="property_service" dev="tmpfs" ino=6967 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0
+2024-05-08 19:20:51.339 26955-27001 libEGL                  com.andresnav.trackmyshoes           D  Emulator has host GPU support, qemu.gles is set to 1.
+2024-05-08 19:20:51.339 26955-27001 libc                    com.andresnav.trackmyshoes           W  Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+2024-05-08 19:20:51.391 26955-27001 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libEGL_emulation.so
+2024-05-08 19:20:51.398 26955-27001 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libGLESv1_CM_emulation.so
+2024-05-08 19:20:51.402 26955-27001 libEGL                  com.andresnav.trackmyshoes           D  loaded /vendor/lib/egl/libGLESv2_emulation.so
+2024-05-08 19:20:51.405 26955-26955 AppCompatDelegate       com.andresnav.trackmyshoes           D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-05-08 19:20:51.529 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           W  Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+2024-05-08 19:20:51.529 26955-26955 av.trackmyshoe          com.andresnav.trackmyshoes           W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2024-05-08 19:20:51.805 26955-26999 HostConnection          com.andresnav.trackmyshoes           D  HostConnection::get() New Host Connection established 0xd2656f00, tid 26999
+2024-05-08 19:20:51.810 26955-26999 HostConnection          com.andresnav.trackmyshoes           D  HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV420_888_to_NV21 ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2 
+2024-05-08 19:20:51.847 26955-26999 OpenGLRenderer          com.andresnav.trackmyshoes           W  Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+2024-05-08 19:20:51.854 26955-26999 eglCodecCommon          com.andresnav.trackmyshoes           D  setVertexArrayObject: set vao to 0 (0) 0 0
+2024-05-08 19:20:51.854 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglCreateContext: 0xe8c7f8e0: maj 2 min 0 rcv 2
+2024-05-08 19:20:51.941 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglMakeCurrent: 0xe8c7f8e0: ver 2 0 (tinfo 0xddb65770)
+2024-05-08 19:20:51.963 26955-26999 Gralloc3                com.andresnav.trackmyshoes           W  mapper 3.x is not supported
+2024-05-08 19:20:51.972 26955-26999 HostConnection          com.andresnav.trackmyshoes           D  createUnique: call
+2024-05-08 19:20:51.972 26955-26999 HostConnection          com.andresnav.trackmyshoes           D  HostConnection::get() New Host Connection established 0xd26588f0, tid 26999
+2024-05-08 19:20:51.972 26955-26999 HostConnection          com.andresnav.trackmyshoes           D  HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV420_888_to_NV21 ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2 
+2024-05-08 19:20:51.974 26955-26999 eglCodecCommon          com.andresnav.trackmyshoes           D  allocate: Ask for block of size 0x1000
+2024-05-08 19:20:51.974 26955-26999 eglCodecCommon          com.andresnav.trackmyshoes           D  allocate: ioctl allocate returned offset 0x3ff803000 size 0x2000
+2024-05-08 19:20:51.996 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglMakeCurrent: 0xe8c7f8e0: ver 2 0 (tinfo 0xddb65770)
+2024-05-08 19:20:52.014 26955-26999 eglCodecCommon          com.andresnav.trackmyshoes           D  setVertexArrayObject: set vao to 0 (0) 1 0
+2024-05-08 19:20:52.052 26955-26999 OpenGLRenderer          com.andresnav.trackmyshoes           I  Davey! duration=777ms; Flags=1, IntendedVsync=17518056155944, Vsync=17518506155926, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=17518521433060, AnimationStart=17518521473560, PerformTraversalsStart=17518522783160, DrawStart=17518772795860, SyncQueued=17518778740860, SyncStart=17518781791960, IssueDrawCommandsStart=17518781882460, SwapBuffers=17518828907360, FrameCompleted=17518836477160, DequeueBufferDuration=66000, QueueBufferDuration=218000, 
+2024-05-08 19:20:52.742 26955-26955 ActivityThread          com.andresnav.trackmyshoes           W  handleWindowVisibility: no activity for token android.os.BinderProxy@e084f2e
+2024-05-08 19:20:52.943 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglMakeCurrent: 0xe8c7f8e0: ver 2 0 (tinfo 0xddb65770)
+2024-05-08 19:20:57.700 26955-27019 ProfileInstaller        com.andresnav.trackmyshoes           D  Installing profile for com.andresnav.trackmyshoes
+2024-05-08 19:21:04.953 26955-26955 ActivityThread          com.andresnav.trackmyshoes           W  handleWindowVisibility: no activity for token android.os.BinderProxy@c2d3238
+2024-05-08 19:21:05.076 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglMakeCurrent: 0xe8c7f8e0: ver 2 0 (tinfo 0xddb65770)
+2024-05-08 19:21:08.581 26955-26955 GoogleActivity          com.andresnav.trackmyshoes           W  Google sign in failed
+                                                                                                    com.google.android.gms.common.api.ApiException: 10: 
+                                                                                                    	at com.google.android.gms.common.internal.ApiExceptionUtil.fromStatus(com.google.android.gms:play-services-base@@18.0.1:3)
+                                                                                                    	at com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(com.google.android.gms:play-services-auth@@21.0.0:3)
+                                                                                                    	at com.andresnav.trackmyshoes.LoginActivity.onActivityResult(LoginActivity.java:77)
+                                                                                                    	at android.app.Activity.dispatchActivityResult(Activity.java:8110)
+                                                                                                    	at android.app.ActivityThread.deliverResults(ActivityThread.java:4838)
+                                                                                                    	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4886)
+                                                                                                    	at android.app.servertransaction.ActivityResultItem.execute(ActivityResultItem.java:51)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2016)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loop(Looper.java:214)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:7356)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+2024-05-08 19:21:08.595 26955-26999 EGL_emulation           com.andresnav.trackmyshoes           D  eglMakeCurrent: 0xe8c7f8e0: ver 2 0 (tinfo 0xddb65770)
